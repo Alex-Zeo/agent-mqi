@@ -59,7 +59,7 @@ pub const WEIGHTS: [f64; METRIC_COUNT] = [
     0.02, // [17] re_instruction_rate
     0.10, // [18] incident_exposure
     0.09, // [19] issue_velocity
-    0.00, // [20] redaction_rate (zeroed: extended-thinking forces 100%)
+    0.02, // [20] redaction_rate (empty/truncated thinking blocks)
     0.03, // [21] implicit_constraint_violator
     0.03, // [22] trial_and_error_debugging
     0.05, // [23] token_rate_per_minute
