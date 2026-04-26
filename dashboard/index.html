@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MQI Dashboard - Model Quality Index</title>
+  <link rel="stylesheet" href="css/mqi.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__brand">
+      <span class="brand-mqi">MQI</span>
+      <span class="brand-dim">Model Quality Index</span>
+    </div>
+    <div class="navbar__spacer"></div>
+    <div class="navbar__controls">
+      <a href="https://github.com/Alex-Zeo/agent-mqi" class="github-link" target="_blank">GitHub</a>
+    </div>
+  </nav>
+
+  <div class="controls-bar">
+    <div class="period-pills" id="period-pills">
+      <button class="period-pill" data-period="today">Today</button>
+      <button class="period-pill" data-period="week">This Week</button>
+      <button class="period-pill" data-period="month">This Month</button>
+      <button class="period-pill period-pill--active" data-period="all">All Time</button>
+    </div>
+    <div class="date-range-inputs">
+      <input type="date" id="date-from" class="date-input" />
+      <span class="date-range-separator">--</span>
+      <input type="date" id="date-to" class="date-input" />
+    </div>
+  </div>
+
+  <main class="main-content" id="main-content">
+    <h1>Model Quality</h1>
+    <div id="mqi-dashboard"></div>
+  </main>
+
+  <footer class="footer">
+    <p>MQI - 24-metric composite score for AI agent quality. <a href="https://github.com/Alex-Zeo/agent-mqi">Documentation</a></p>
+  </footer>
+
+  <script type="module" src="js/mqi-dashboard.js"></script>
+</body>
+</html>

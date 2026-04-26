@@ -107,6 +107,24 @@ MQI is designed specifically for Claude Code CLI sessions (`~/.claude/projects/*
 
 See [ADR-005](docs/adr-005-claude-code-only.md) for the full rationale.
 
+## Dashboard
+
+A standalone web dashboard is included in `dashboard/` for visualizing MQI scores:
+
+```bash
+# Serve the dashboard locally
+cd dashboard && python3 -m http.server 8080
+# Open http://localhost:8080
+```
+
+The dashboard consumes JSON output from the Rust library. Place your scored session data in `dashboard/data/demo.json` to visualize it.
+
+Features:
+- MQI-X score card with status indicator
+- Group-level summary (6 behavioral dimensions)
+- Full 24-metric breakdown with z-scores and weights
+- Date range filtering
+
 ## Installation
 
 Add to your `Cargo.toml`:
