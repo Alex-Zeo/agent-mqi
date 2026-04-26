@@ -109,7 +109,7 @@ See [ADR-005](docs/adr-005-claude-code-only.md) for the full rationale.
 
 ## Dashboard
 
-A standalone web dashboard is included in `dashboard/` for visualizing MQI scores:
+A standalone web dashboard is included in `dashboard/` for visualizing MQI scores. This is a 1:1 clone of the Model Quality tab from BloomNet.
 
 ```bash
 # Serve the dashboard locally
@@ -117,13 +117,20 @@ cd dashboard && python3 -m http.server 8080
 # Open http://localhost:8080
 ```
 
-The dashboard consumes JSON output from the Rust library. Place your scored session data in `dashboard/data/demo.json` to visualize it.
+The dashboard consumes JSON data from `dashboard/data/mqi.json`. Replace with your scored session data to visualize it.
 
 Features:
-- MQI-X score card with status indicator
-- Group-level summary (6 behavioral dimensions)
-- Full 24-metric breakdown with z-scores and weights
-- Date range filtering
+- **WHY MQI MOVED**: 7D vs 30D divergence, sigma calibration, drift attribution bars
+- **MQI BY GROUP (RADAR)**: Hexagonal radar chart across 6 behavioral dimensions
+- **Session Picker**: Filterable list of sessions with MQI-X scores
+- **Group Cards**: Per-group z-scores and deltas (Thinking, Research, Execution, Trust, Throughput, Environment)
+- **GROUP LEGEND**: Full 24-metric breakdown with weights
+- **EXTERNAL SIGNALS**: Issue velocity and incident timeline
+- **MQI TREND**: Composite z time series with per-session scatter
+- **MQI BY MODEL**: Per-model performance comparison
+- **MODEL DEGRADATION**: Top-K cohort comparison table
+- **THINKING DEPTH**: Hourly and day-of-week heatmaps
+- **Date Range Filtering**: Period pills and custom date inputs
 
 ## Installation
 

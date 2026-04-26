@@ -4,17 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MQI Dashboard - Model Quality Index</title>
-  <link rel="stylesheet" href="css/mqi.css">
+  <link rel="stylesheet" href="css/bloomnet.css">
+  <style>
+    /* MQI-specific overrides */
+    .navbar__tab:not([data-view="model-quality"]) { display: none; }
+    .controls-bar { display: flex; }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="navbar__brand">
-      <span class="brand-mqi">MQI</span>
+      <span class="brand-bloom">MQI</span>
       <span class="brand-dim">Model Quality Index</span>
+    </div>
+    <div class="navbar__tabs" id="navbar-tabs">
+      <button class="navbar__tab navbar__tab--active" data-view="model-quality">
+        MODEL QUALITY <span class="navbar__tab-badge">2</span>
+      </button>
     </div>
     <div class="navbar__spacer"></div>
     <div class="navbar__controls">
-      <a href="https://github.com/Alex-Zeo/agent-mqi" class="github-link" target="_blank">GitHub</a>
+      <a href="https://github.com/Alex-Zeo/agent-mqi" target="_blank" style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); text-decoration: none;">GitHub</a>
     </div>
   </nav>
 
@@ -23,6 +33,7 @@
       <button class="period-pill" data-period="today">Today</button>
       <button class="period-pill" data-period="week">This Week</button>
       <button class="period-pill" data-period="month">This Month</button>
+      <button class="period-pill" data-period="quarter">This Quarter</button>
       <button class="period-pill period-pill--active" data-period="all">All Time</button>
     </div>
     <div class="date-range-inputs">
@@ -33,14 +44,12 @@
   </div>
 
   <main class="main-content" id="main-content">
-    <h1>Model Quality</h1>
-    <div id="mqi-dashboard"></div>
+    <div id="model-quality-view"></div>
   </main>
 
-  <footer class="footer">
-    <p>MQI - 24-metric composite score for AI agent quality. <a href="https://github.com/Alex-Zeo/agent-mqi">Documentation</a></p>
-  </footer>
-
-  <script type="module" src="js/mqi-dashboard.js"></script>
+  <script src="lib/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3"></script>
+  <script type="module" src="js/chart-audit.js"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
