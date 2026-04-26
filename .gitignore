@@ -3,3 +3,7 @@ Cargo.lock
 *.swp
 *.swo
 .DS_Store
+
+# User-generated MQI data (contains personal session info)
+dashboard/data/mqi.json
+dashboard/data/mqi-test.json

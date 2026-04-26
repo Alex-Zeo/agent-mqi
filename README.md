@@ -1,63 +1,60 @@
 # agent-mqi
 
-**Model Quality Index (MQI)** - A 24-metric composite score for detecting AI agent degradation.
+**Model Quality Index (MQI)** - A 24-metric composite score for detecting AI agent degradation in Claude Code sessions.
 
-MQI monitors Claude Code sessions across six behavioral dimensions, producing a 0-100 quality score that surfaces when your AI assistant is struggling.
+![MQI Dashboard](docs/screenshots/hero.png)
+
+MQI monitors your Claude Code sessions across six behavioral dimensions, producing a 0-100 quality score that surfaces when your AI assistant is struggling.
 
 ## Why MQI?
 
 AI agents can degrade in subtle ways that are hard to notice session-by-session:
-- Thinking becomes shallower
-- Research habits slip (editing before reading)
-- Self-correction decreases
-- Trust signals emerge (user interruptions, constraint violations)
+
+- **Thinking becomes shallower** - Shorter reasoning blocks, skipped analysis
+- **Research habits slip** - Editing before reading, fewer file searches
+- **Self-correction decreases** - Accepting first solutions, missing edge cases
+- **Trust signals emerge** - More user interruptions, constraint violations
 
 MQI tracks 24 metrics derived from session transcripts and computes a weighted composite score. When MQI drops, you know something changed.
 
 ## Quick Start
 
-```rust
-use agent_mqi::{SessionMetrics, score_session, compute_baseline, METRIC_COUNT};
+### 1. Install
 
-// Your session data
-struct MySession {
-    thinking_depth: f64,
-    read_edit_ratio: f64,
-    user_interrupts: u32,
-    // ... other metrics
-}
+```bash
+# Clone the repo
+git clone https://github.com/Alex-Zeo/agent-mqi.git
+cd agent-mqi
 
-impl SessionMetrics for MySession {
-    fn metric_value(&self, index: usize) -> f64 {
-        match index {
-            0 => self.read_edit_ratio,
-            2 => self.thinking_depth,
-            8 => self.user_interrupts as f64,
-            _ => 0.0,
-        }
-    }
-}
-
-// Compute baseline from historical sessions
-let baseline = compute_baseline(&sessions, &dates, "2026-01-01", "2026-02-01");
-
-// Score a new session
-let score = score_session(&current_session, &baseline);
-println!("MQI-X: {:.1}/100", score.mqi_x);
-
-// Check per-metric breakdown
-for m in &score.metrics {
-    if m.status == MetricStatus::Error {
-        println!("  {} is degraded (z={:.2})", m.name, m.z);
-    }
-}
+# Build the CLI
+cargo build --release
 ```
+
+### 2. Generate Your MQI Score
+
+```bash
+# Scan your Claude Code sessions and generate mqi.json
+./target/release/mqi -o dashboard/data/mqi.json
+```
+
+This scans `~/.claude/projects/` for all your session transcripts, computes baselines, and scores each session.
+
+### 3. View the Dashboard
+
+```bash
+cd dashboard && python3 -m http.server 8080
+# Open http://localhost:8080
+```
+
+The dashboard shows your MQI score, per-metric breakdowns, and trends over time.
 
 ## The 24 Metrics
 
+MQI tracks metrics across six behavioral dimensions:
+
 | Group | Metrics | Weight |
 |-------|---------|--------|
-| **Thinking** | thinking_depth, reasoning_loops, zero_reasoning_turn_rate | 19% |
+| **Thinking** | thinking_depth, reasoning_loops, zero_reasoning_turn_rate, redaction_rate | 19% |
 | **Research** | read_edit_ratio, research_mutation_ratio, simplest_fix | 16% |
 | **Execution** | edits_without_read, write_edit_ratio, premature_stopping, repeated_edits, stop_hook_violations, reversion_rate, post_compaction_drift, human_time_estimation, trial_and_error_debugging | 23% |
 | **Trust** | user_interrupts, self_admitted_failures, keyword_sentiment, re_instruction_rate, implicit_constraint_violator | 18% |
@@ -66,73 +63,86 @@ for m in &score.metrics {
 
 ### Key Metrics Explained
 
-- **thinking_depth**: Length of thinking blocks per turn. Deeper thinking correlates with better outputs.
+- **thinking_depth**: Average length of thinking blocks per turn. Deeper thinking correlates with better outputs.
 - **read_edit_ratio**: Research before editing. Sessions that read more files before editing tend to produce better code.
-- **user_interrupts**: Times the user interrupted the agent. High interrupts suggest the agent wasn't meeting expectations.
+- **user_interrupts**: Times the user interrupted the agent mid-task. High interrupts suggest the agent wasn't meeting expectations.
 - **incident_exposure**: Fraction of session that overlapped with Anthropic service incidents.
 
-## Scoring Methodology
+## How It Works
+
+```
+~/.claude/projects/          Your Claude Code session transcripts
+        |
+        v
+    mqi CLI                  Parses sessions, extracts 24 metrics
+        |
+        v
+  mqi.json                   Scored sessions with z-scores and status
+        |
+        v
+  Dashboard                  Visualize trends, identify degradation
+```
+
+### Scoring Methodology
 
 1. **Transform**: Each metric is transformed to approximate normality (logit for ratios, log1p for counts)
-2. **Z-score**: Compare to baseline using robust estimators (MAD-based sigma)
-3. **Orient**: Flip sign so positive z = good
-4. **Weight**: Weighted sum across metrics
-5. **Sigmoid**: Scale to 0-100
+2. **Baseline**: Compare to your historical sessions (first 30% of data)
+3. **Z-score**: Compute deviation from baseline using robust estimators (MAD-based sigma)
+4. **Orient**: Flip sign so positive z = good performance
+5. **Weight**: Weighted sum across all 24 metrics
+6. **Scale**: Map to 0-100 using sigmoid
 
-A score of 50 means "baseline quality". Above 50 is better than baseline; below 50 is worse.
+A score of **50 means baseline quality**. Above 50 is better than your historical average; below 50 is worse.
 
-## Per-Model Baselines
+## Dashboard Features
 
-Different model architectures have different baseline behaviors. MQI supports per-model top-K baselines so Opus 4.7 is compared against Opus 4.7's best sessions, not Sonnet's.
+The web dashboard provides comprehensive visualization of your MQI data:
 
-```rust
-use agent_mqi::{compute_per_model_topk_baselines, TopKConfig};
-
-let cfg = TopKConfig::default(); // top 20%, min 30 sessions
-let baselines = compute_per_model_topk_baselines(&sessions, &models, cfg);
-
-let opus_baseline = baselines.get("claude-opus-4-7").unwrap();
-```
+- **WHY MQI MOVED**: 7-day vs 30-day divergence analysis, sigma calibration warnings, drift attribution bars showing which metrics moved most
+- **MQI BY GROUP (RADAR)**: Hexagonal radar chart showing performance across all six behavioral dimensions
+- **Session Picker**: Filterable list of sessions with MQI-X scores, duration, and tool call counts
+- **Group Cards**: Per-group z-scores and deltas (Thinking, Research, Execution, Trust, Throughput, Environment)
+- **GROUP LEGEND**: Full 24-metric breakdown with weights and status indicators
+- **MQI TREND**: Composite z time series with per-session scatter plot
+- **MQI BY MODEL**: Performance comparison across different Claude models
+- **MODEL DEGRADATION**: Top-K cohort comparison table per model
+- **Date Range Filtering**: Period pills (Today, Week, Month) and custom date inputs
 
 ## Scoped to Claude Code CLI
 
-MQI is designed specifically for Claude Code CLI sessions (`~/.claude/projects/*/sessions/*.jsonl`). Other agentic IDEs (Cursor, Codex, Windsurf) don't expose sufficient telemetry for meaningful quality scoring:
+MQI is designed specifically for Claude Code CLI sessions. The transcripts at `~/.claude/projects/` contain the telemetry needed for meaningful quality scoring:
 
 | Source | Data Available | MQI Compatible |
 |--------|---------------|----------------|
-| Claude Code CLI | Full transcripts, tool calls, thinking blocks | Yes |
+| **Claude Code CLI** | Full transcripts, tool calls, thinking blocks | Yes |
 | Cursor | Code hashes, commit attribution | No |
 | Codex | Prompts only, no tool calls | No |
-| Windsurf | Empty | No |
+| Windsurf | Minimal | No |
 
-See [ADR-005](docs/adr-005-claude-code-only.md) for the full rationale.
+## Library Usage
 
-## Dashboard
+For programmatic access, use the Rust library:
 
-A standalone web dashboard is included in `dashboard/` for visualizing MQI scores. This is a 1:1 clone of the Model Quality tab from BloomNet.
+```rust
+use agent_mqi::{SessionMetrics, score_session, compute_baseline};
 
-```bash
-# Serve the dashboard locally
-cd dashboard && python3 -m http.server 8080
-# Open http://localhost:8080
+// Implement SessionMetrics for your session type
+struct MySession { /* ... */ }
+
+impl SessionMetrics for MySession {
+    fn metric_value(&self, index: usize) -> f64 {
+        // Return raw metric values by index
+        0.0
+    }
+}
+
+// Compute baseline from historical sessions
+let baseline = compute_baseline(&sessions, &dates, "2025-01-01", "2025-01-31");
+
+// Score a new session
+let score = score_session(&current_session, &baseline);
+println!("MQI-X: {:.1}/100", score.mqi_x);
 ```
-
-The dashboard consumes JSON data from `dashboard/data/mqi.json`. Replace with your scored session data to visualize it.
-
-Features:
-- **WHY MQI MOVED**: 7D vs 30D divergence, sigma calibration, drift attribution bars
-- **MQI BY GROUP (RADAR)**: Hexagonal radar chart across 6 behavioral dimensions
-- **Session Picker**: Filterable list of sessions with MQI-X scores
-- **Group Cards**: Per-group z-scores and deltas (Thinking, Research, Execution, Trust, Throughput, Environment)
-- **GROUP LEGEND**: Full 24-metric breakdown with weights
-- **EXTERNAL SIGNALS**: Issue velocity and incident timeline
-- **MQI TREND**: Composite z time series with per-session scatter
-- **MQI BY MODEL**: Per-model performance comparison
-- **MODEL DEGRADATION**: Top-K cohort comparison table
-- **THINKING DEPTH**: Hourly and day-of-week heatmaps
-- **Date Range Filtering**: Period pills and custom date inputs
-
-## Installation
 
 Add to your `Cargo.toml`:
 
@@ -140,6 +150,10 @@ Add to your `Cargo.toml`:
 [dependencies]
 agent-mqi = "0.1"
 ```
+
+## Example Data
+
+The repo includes example data at `dashboard/data/mqi.example.json` for testing the dashboard without your own sessions. The dashboard automatically loads example data if `mqi.json` doesn't exist.
 
 ## License
 
