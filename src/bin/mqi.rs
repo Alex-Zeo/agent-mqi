@@ -171,12 +171,18 @@ struct UsageInfo {
 struct Incident {
     start: chrono::DateTime<chrono::Utc>,
     end: Option<chrono::DateTime<chrono::Utc>>,
+    title: String,
+    severity: String,
 }
 
 #[derive(Debug, Deserialize)]
 struct StatusIncident {
     created_at: String,
     resolved_at: Option<String>,
+    #[serde(default)]
+    name: Option<String>,
+    #[serde(default)]
+    impact: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -200,7 +206,12 @@ fn fetch_incidents() -> Vec<Incident> {
                                 .ok()
                                 .map(|d| d.with_timezone(&chrono::Utc))
                         });
-                        Some(Incident { start, end })
+                        Some(Incident {
+                            start,
+                            end,
+                            title: inc.name.unwrap_or_else(|| "Unknown incident".to_string()),
+                            severity: inc.impact.unwrap_or_else(|| "minor".to_string()),
+                        })
                     })
                     .collect()
             } else {
@@ -726,7 +737,7 @@ struct DashboardJson {
     by_hour: Vec<HourStats>,
     daily: Vec<DailyStats>,
     keyword_tracker: KeywordTracker,
-    incidents_recent: Vec<()>,
+    incidents_recent: Vec<OutputIncident>,
     issue_velocity_series: Vec<IssueVelocity>,
 }
 
@@ -848,6 +859,16 @@ struct KeywordTracker {
 struct IssueVelocity {
     date: String,
     open: u32,
+}
+
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+struct OutputIncident {
+    published_at: String,
+    title: String,
+    severity: String,
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    affected_models: Vec<String>,
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1158,7 +1179,7 @@ fn main() {
     let mut daily: Vec<DailyStats> = daily_stats.iter().map(|(date, (sum_z, count))| {
         DailyStats {
             date: date.clone(),
-            mean_z: sum_z / *count as f64,
+            composite_z: sum_z / *count as f64,
             session_count: *count,
         }
     }).collect();
