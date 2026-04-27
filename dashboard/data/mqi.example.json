@@ -1,7 +1,7 @@
 {
   "currentMqi": {
-    "mqiX": 45.32150891899048,
-    "compositeZ": -0.28153302847960654,
+    "mqiX": 45.287868902835456,
+    "compositeZ": -0.2835693869078168,
     "status": "green",
     "sessionCount": 6223,
     "metrics": [
@@ -23,8 +23,8 @@
       },
       {
         "name": "thinking_depth",
-        "raw": 63.1764705882353,
-        "z": 1.2230085194448728,
+        "raw": 46.8,
+        "z": 1.1031272475209197,
         "status": "green",
         "weight": 0.09,
         "source": "computed"
@@ -71,9 +71,9 @@
       },
       {
         "name": "user_interrupts",
-        "raw": 0.0,
-        "z": 0.06029302258718148,
-        "status": "green",
+        "raw": 1.0,
+        "z": -5.0,
+        "status": "error",
         "weight": 0.07,
         "source": "computed"
       },
@@ -95,8 +95,8 @@
       },
       {
         "name": "keyword_sentiment",
-        "raw": 0.2727272727272727,
-        "z": 0.08254847549018715,
+        "raw": 0.2857142857142857,
+        "z": 0.13196724193738144,
         "status": "green",
         "weight": 0.02,
         "source": "computed"
@@ -111,8 +111,8 @@
       },
       {
         "name": "zero_reasoning_turn_rate",
-        "raw": 0.9264705882352942,
-        "z": -0.3093515517225699,
+        "raw": 0.9363636363636364,
+        "z": -0.33372793939379064,
         "status": "green",
         "weight": 0.02,
         "source": "computed"
@@ -175,24 +175,24 @@
       },
       {
         "name": "implicit_constraint_violator",
-        "raw": 0.0,
-        "z": 0.023659781127972276,
+        "raw": 0.00909090909090909,
+        "z": -0.5404478460174014,
         "status": "green",
         "weight": 0.03,
         "source": "computed"
       },
       {
         "name": "trial_and_error_debugging",
-        "raw": 0.05714285714285714,
-        "z": -1.899367780895821,
+        "raw": 0.05128205128205128,
+        "z": -1.6943326075685943,
         "status": "watch",
         "weight": 0.03,
         "source": "computed"
       },
       {
         "name": "token_rate_per_minute",
-        "raw": 1446.671675432006,
-        "z": 3.6429967069981326,
+        "raw": 795.5574324324324,
+        "z": 1.8440120486923153,
         "status": "green",
         "weight": 0.05,
         "source": "computed"
@@ -200,8 +200,8 @@
     ]
   },
   "currentMqi7d": {
-    "mqiX": 50.424883997572465,
-    "compositeZ": 0.025493653503201992,
+    "mqiX": 49.18429637527808,
+    "compositeZ": -0.04894656015026376,
     "sessionCount": 9
   },
   "baseline": {
@@ -388,12 +388,12 @@
   "compositeStdEmpirical": 0.3,
   "compositeAttribution": [
     {
-      "name": "research_mutation_ratio",
-      "contribution": 0.22126661827206973
+      "name": "user_interrupts",
+      "contribution": -0.35000000000000003
     },
     {
-      "name": "token_rate_per_minute",
-      "contribution": 0.18214983534990664
+      "name": "research_mutation_ratio",
+      "contribution": 0.22126661827206973
     },
     {
       "name": "reasoning_loops",
@@ -405,7 +405,11 @@
     },
     {
       "name": "thinking_depth",
-      "contribution": 0.11007076675003855
+      "contribution": 0.09928145227688277
+    },
+    {
+      "name": "token_rate_per_minute",
+      "contribution": 0.09220060243461577
     },
     {
       "name": "read_edit_ratio",
@@ -413,11 +417,7 @@
     },
     {
       "name": "trial_and_error_debugging",
-      "contribution": -0.056981033426874626
-    },
-    {
-      "name": "incident_exposure",
-      "contribution": 0.03268317547466397
+      "contribution": -0.05082997822705783
     }
   ],
   "sessions": [
@@ -425,14 +425,14 @@
       "sessionId": "c792d7c9-0ea9-43b0-9dfd-a04c6b184432",
       "model": "claude-opus-4-6",
       "startIso": "2026-04-27T00:56:27.371Z",
-      "endIso": "2026-04-27T01:18:38.427Z",
-      "durationMinutes": 22.183333333333334,
-      "toolCallCount": 47,
+      "endIso": "2026-04-27T01:55:39.868Z",
+      "durationMinutes": 59.2,
+      "toolCallCount": 76,
       "projectName": "-Users-pluto-Documents",
       "isAutomated": false,
       "mqi": {
-        "mqiX": 57.241576354498925,
-        "compositeZ": 0.2917142733845326,
+        "mqiX": 45.67294828095777,
+        "compositeZ": -0.17351611162404174,
         "status": "green",
         "metrics": [
           {
@@ -451,8 +451,8 @@
           },
           {
             "name": "thinking_depth",
-            "raw": 63.1764705882353,
-            "z": 1.2230085194448728,
+            "raw": 46.8,
+            "z": 1.1031272475209197,
             "status": "green",
             "weight": 0.09
           },
@@ -493,9 +493,9 @@
           },
           {
             "name": "user_interrupts",
-            "raw": 0.0,
-            "z": 0.06029302258718148,
-            "status": "green",
+            "raw": 1.0,
+            "z": -5.0,
+            "status": "error",
             "weight": 0.07
           },
           {
@@ -514,8 +514,8 @@
           },
           {
             "name": "keyword_sentiment",
-            "raw": 0.2727272727272727,
-            "z": 0.08254847549018715,
+            "raw": 0.2857142857142857,
+            "z": 0.13196724193738144,
             "status": "green",
             "weight": 0.02
           },
@@ -528,8 +528,8 @@
           },
           {
             "name": "zero_reasoning_turn_rate",
-            "raw": 0.9264705882352942,
-            "z": -0.3093515517225699,
+            "raw": 0.9363636363636364,
+            "z": -0.33372793939379064,
             "status": "green",
             "weight": 0.02
           },
@@ -584,22 +584,22 @@
           },
           {
             "name": "implicit_constraint_violator",
-            "raw": 0.0,
-            "z": 0.023659781127972276,
+            "raw": 0.00909090909090909,
+            "z": -0.5404478460174014,
             "status": "green",
             "weight": 0.03
           },
           {
             "name": "trial_and_error_debugging",
-            "raw": 0.05714285714285714,
-            "z": -1.899367780895821,
+            "raw": 0.05128205128205128,
+            "z": -1.6943326075685943,
             "status": "watch",
             "weight": 0.03
           },
           {
             "name": "token_rate_per_minute",
-            "raw": 1446.671675432006,
-            "z": 3.6429967069981326,
+            "raw": 795.5574324324324,
+            "z": 1.8440120486923153,
             "status": "green",
             "weight": 0.05
           }
@@ -980,34 +980,34 @@
       "sessionId": "7d12de84-784f-4f09-97e0-07f1a2343b52",
       "model": "claude-opus-4-5-20251101",
       "startIso": "2026-04-26T15:54:49.343Z",
-      "endIso": "2026-04-27T01:18:34.815Z",
-      "durationMinutes": 563.75,
-      "toolCallCount": 884,
+      "endIso": "2026-04-27T01:56:32.975Z",
+      "durationMinutes": 601.7166666666667,
+      "toolCallCount": 938,
       "projectName": "-Users-pluto-Documents",
       "isAutomated": false,
       "mqi": {
-        "mqiX": 37.53651274279912,
-        "compositeZ": -0.5092680497385385,
+        "mqiX": 37.61472987135171,
+        "compositeZ": -0.5059334663004691,
         "status": "green",
         "metrics": [
           {
             "name": "read_edit_ratio",
-            "raw": 1.7479674796747968,
-            "z": 1.5566226953406763,
+            "raw": 1.7938931297709924,
+            "z": 1.6018874095558147,
             "status": "green",
             "weight": 0.07
           },
           {
             "name": "research_mutation_ratio",
-            "raw": 0.636094674556213,
-            "z": 2.7127418290195946,
+            "raw": 0.6420765027322405,
+            "z": 2.7408931684161058,
             "status": "green",
             "weight": 0.05
           },
           {
             "name": "thinking_depth",
-            "raw": 136.29592959295928,
-            "z": 1.5324672609361936,
+            "raw": 134.63397005678885,
+            "z": 1.5275115373554515,
             "status": "green",
             "weight": 0.09
           },
@@ -1020,8 +1020,8 @@
           },
           {
             "name": "write_edit_ratio",
-            "raw": 0.21951219512195122,
-            "z": -2.2686177483563674,
+            "raw": 0.20610687022900764,
+            "z": -2.1202014269098126,
             "status": "error",
             "weight": 0.03
           },
@@ -1034,7 +1034,7 @@
           },
           {
             "name": "simplest_fix",
-            "raw": 0.05307855626326964,
+            "raw": 0.051493305870236865,
             "z": 5.0,
             "status": "green",
             "weight": 0.04
@@ -1069,8 +1069,8 @@
           },
           {
             "name": "keyword_sentiment",
-            "raw": 0.3885350318471338,
-            "z": 0.5232253737454229,
+            "raw": 0.39156626506024095,
+            "z": 0.534759958823248,
             "status": "green",
             "weight": 0.02
           },
@@ -1083,28 +1083,28 @@
           },
           {
             "name": "zero_reasoning_turn_rate",
-            "raw": 0.5907590759075908,
-            "z": 0.03111396520698768,
+            "raw": 0.5875064532782653,
+            "z": 0.03322558957041124,
             "status": "green",
             "weight": 0.02
           },
           {
             "name": "reversion_rate",
-            "raw": 0.08333333333333333,
-            "z": -2.845144199453768,
+            "raw": 0.07692307692307693,
+            "z": -2.6196685081422495,
             "status": "error",
             "weight": 0.04
           },
           {
             "name": "post_compaction_drift",
-            "raw": 0.13751375137513752,
+            "raw": 0.12906556530717603,
             "z": -5.0,
             "status": "error",
             "weight": 0.02
           },
           {
             "name": "human_time_estimation",
-            "raw": 1.5543237250554325,
+            "raw": 1.3931529235797577,
             "z": -5.0,
             "status": "error",
             "weight": 0.02
@@ -1146,15 +1146,15 @@
           },
           {
             "name": "trial_and_error_debugging",
-            "raw": 0.041811846689895474,
-            "z": -1.360597675125326,
+            "raw": 0.04966887417218543,
+            "z": -1.6376963847240202,
             "status": "watch",
             "weight": 0.03
           },
           {
             "name": "token_rate_per_minute",
-            "raw": 1338.080709534368,
-            "z": 3.342967205599883,
+            "raw": 1293.0055674043708,
+            "z": 3.2184276335744677,
             "status": "green",
             "weight": 0.05
           }
@@ -1165,34 +1165,34 @@
       "sessionId": "30c066b0-2229-4047-b5f7-1ee6e942784a",
       "model": "claude-opus-4-6",
       "startIso": "2026-04-26T23:10:21.967Z",
-      "endIso": "2026-04-27T01:17:50.425Z",
-      "durationMinutes": 127.46666666666667,
-      "toolCallCount": 84,
+      "endIso": "2026-04-27T01:50:43.487Z",
+      "durationMinutes": 160.35,
+      "toolCallCount": 111,
       "projectName": "-Users-pluto-Documents",
       "isAutomated": false,
       "mqi": {
-        "mqiX": 61.216413939675704,
-        "compositeZ": 0.4564182377470072,
+        "mqiX": 56.000336590089184,
+        "compositeZ": 0.24117571714014555,
         "status": "green",
         "metrics": [
           {
             "name": "read_edit_ratio",
-            "raw": 7.333333333333333,
-            "z": 5.0,
+            "raw": 3.5,
+            "z": 3.2834409583818496,
             "status": "green",
             "weight": 0.07
           },
           {
             "name": "research_mutation_ratio",
-            "raw": 0.88,
-            "z": 3.860595193431084,
+            "raw": 0.7777777777777778,
+            "z": 3.379522787644523,
             "status": "green",
             "weight": 0.05
           },
           {
             "name": "thinking_depth",
-            "raw": 48.818897637795274,
-            "z": 1.1199607585345863,
+            "raw": 181.04255319148936,
+            "z": 1.6472583671843204,
             "status": "green",
             "weight": 0.09
           },
@@ -1219,8 +1219,8 @@
           },
           {
             "name": "simplest_fix",
-            "raw": 0.8849557522123894,
-            "z": 0.37783603170441016,
+            "raw": 0.29069767441860467,
+            "z": 4.143041710145441,
             "status": "green",
             "weight": 0.04
           },
@@ -1240,9 +1240,9 @@
           },
           {
             "name": "repeated_edits",
-            "raw": 0.0,
-            "z": 0.20147352580560332,
-            "status": "green",
+            "raw": 2.0,
+            "z": -2.5638950280910815,
+            "status": "error",
             "weight": 0.01
           },
           {
@@ -1254,8 +1254,8 @@
           },
           {
             "name": "keyword_sentiment",
-            "raw": 0.2727272727272727,
-            "z": 0.08254847549018715,
+            "raw": 0.2037037037037037,
+            "z": -0.18010311655323422,
             "status": "green",
             "weight": 0.02
           },
@@ -1268,23 +1268,23 @@
           },
           {
             "name": "zero_reasoning_turn_rate",
-            "raw": 0.9133858267716536,
-            "z": -0.28137974560093065,
+            "raw": 0.8776595744680851,
+            "z": -0.22084128370866252,
             "status": "green",
             "weight": 0.02
           },
           {
             "name": "reversion_rate",
-            "raw": 0.0,
-            "z": 0.19588177160761147,
-            "status": "green",
+            "raw": 0.125,
+            "z": -4.278995213343912,
+            "status": "error",
             "weight": 0.04
           },
           {
             "name": "post_compaction_drift",
-            "raw": 0.0,
-            "z": 0.07926404993111069,
-            "status": "green",
+            "raw": 0.26595744680851063,
+            "z": -5.0,
+            "status": "error",
             "weight": 0.02
           },
           {
@@ -1310,9 +1310,9 @@
           },
           {
             "name": "issue_velocity",
-            "raw": 9.0,
-            "z": -0.5577771305692789,
-            "status": "green",
+            "raw": 18.0,
+            "z": -1.3023962983578696,
+            "status": "watch",
             "weight": 0.09
           },
           {
@@ -1331,15 +1331,15 @@
           },
           {
             "name": "trial_and_error_debugging",
-            "raw": 0.08771929824561403,
-            "z": -2.9509543352340866,
+            "raw": 0.0684931506849315,
+            "z": -2.2932354895395886,
             "status": "error",
             "weight": 0.03
           },
           {
             "name": "token_rate_per_minute",
-            "raw": 333.0674686192469,
-            "z": 0.5661835286350784,
+            "raw": 987.9201746180231,
+            "z": 2.3754973076036943,
             "status": "green",
             "weight": 0.05
           }
@@ -1350,34 +1350,34 @@
       "sessionId": "e40aebe2-4300-431d-a0c4-41c4c73958b2",
       "model": "claude-opus-4-6",
       "startIso": "2026-04-26T19:06:26.508Z",
-      "endIso": "2026-04-27T01:16:35.655Z",
-      "durationMinutes": 370.15,
-      "toolCallCount": 259,
+      "endIso": "2026-04-27T01:52:08.666Z",
+      "durationMinutes": 405.7,
+      "toolCallCount": 263,
       "projectName": "-Users-pluto-Documents",
       "isAutomated": false,
       "mqi": {
-        "mqiX": 55.21196904755592,
-        "compositeZ": 0.20923882286476964,
+        "mqiX": 55.38936247617401,
+        "compositeZ": 0.21641522216094455,
         "status": "green",
         "metrics": [
           {
             "name": "read_edit_ratio",
-            "raw": 4.481481481481482,
-            "z": 4.250797515635903,
+            "raw": 4.62962962962963,
+            "z": 4.396813599749722,
             "status": "green",
             "weight": 0.07
           },
           {
             "name": "research_mutation_ratio",
-            "raw": 0.8175675675675675,
-            "z": 3.5667792323176113,
+            "raw": 0.8223684210526315,
+            "z": 3.5893727358208687,
             "status": "green",
             "weight": 0.05
           },
           {
             "name": "thinking_depth",
-            "raw": 303.9706498951782,
-            "z": 1.8572157266501323,
+            "raw": 331.1738241308793,
+            "z": 1.891983600990471,
             "status": "green",
             "weight": 0.09
           },
@@ -1453,8 +1453,8 @@
           },
           {
             "name": "zero_reasoning_turn_rate",
-            "raw": 0.7987421383647799,
-            "z": -0.12781243566044026,
+            "raw": 0.7955010224948875,
+            "z": -0.12466296545783966,
             "status": "green",
             "weight": 0.02
           },
@@ -1467,7 +1467,7 @@
           },
           {
             "name": "post_compaction_drift",
-            "raw": 0.7337526205450734,
+            "raw": 0.7157464212678937,
             "z": -5.0,
             "status": "error",
             "weight": 0.02
@@ -1523,8 +1523,8 @@
           },
           {
             "name": "token_rate_per_minute",
-            "raw": 1340.575442388221,
-            "z": 3.349859983908614,
+            "raw": 1287.2516637909787,
+            "z": 3.202529986675858,
             "status": "green",
             "weight": 0.05
           }
@@ -9682,14 +9682,20 @@
     {
       "model": "claude-opus-4-6",
       "sessionCount": 247,
-      "avgMqiX": 45.685597644305574,
-      "avgZ": -0.2595094954637988
+      "avgMqiX": 45.64050784567639,
+      "avgZ": -0.26223539225051645
     },
     {
-      "model": "",
-      "sessionCount": 1546,
-      "avgMqiX": 51.3490801112382,
-      "avgZ": 0.08096445805028418
+      "model": "<synthetic>",
+      "sessionCount": 1691,
+      "avgMqiX": 50.602395384023865,
+      "avgZ": 0.03614547197260459
+    },
+    {
+      "model": "claude-opus-4-5-20251101",
+      "sessionCount": 11,
+      "avgMqiX": 45.40447656454065,
+      "avgZ": -0.2765117821477828
     },
     {
       "model": "claude-opus-4-7",
@@ -9698,31 +9704,25 @@
       "avgZ": -0.39935201115720315
     },
     {
-      "model": "claude-opus-4-5-20251101",
-      "sessionCount": 11,
-      "avgMqiX": 45.39946689225068,
-      "avgZ": -0.2768149260966982
+      "model": "",
+      "sessionCount": 1546,
+      "avgMqiX": 51.3490801112382,
+      "avgZ": 0.08096445805028418
     },
     {
       "model": "claude-sonnet-4-6",
       "sessionCount": 2653,
       "avgMqiX": 50.267910511046225,
       "avgZ": 0.016074784501871612
-    },
-    {
-      "model": "<synthetic>",
-      "sessionCount": 1691,
-      "avgMqiX": 50.602395384023865,
-      "avgZ": 0.03614547197260459
     }
   ],
   "byVersion": [
     {
-      "ccVersion": "2.1.119",
-      "sessionCount": 4,
-      "compositeZ": -0.1291536346857452,
-      "firstDate": "2026-04-24",
-      "lastDate": "2026-04-25",
+      "ccVersion": "2.1.91",
+      "sessionCount": 161,
+      "compositeZ": 0.0014613111792582923,
+      "firstDate": "2026-04-03",
+      "lastDate": "2026-04-03",
       "status": "green"
     },
     {
@@ -9734,19 +9734,11 @@
       "status": "green"
     },
     {
-      "ccVersion": "2.1.89",
-      "sessionCount": 270,
-      "compositeZ": 0.0028017013030048484,
-      "firstDate": "2026-04-01",
-      "lastDate": "2026-04-06",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.88",
-      "sessionCount": 79,
-      "compositeZ": -0.025855998471979405,
-      "firstDate": "2026-03-31",
-      "lastDate": "2026-04-01",
+      "ccVersion": "2.1.107",
+      "sessionCount": 482,
+      "compositeZ": -0.005186342208039434,
+      "firstDate": "2026-04-14",
+      "lastDate": "2026-04-16",
       "status": "green"
     },
     {
@@ -9758,35 +9750,43 @@
       "status": "green"
     },
     {
-      "ccVersion": "2.1.86",
-      "sessionCount": 464,
-      "compositeZ": 0.03937382533535964,
+      "ccVersion": "2.1.85",
+      "sessionCount": 2,
+      "compositeZ": -0.6127955982523363,
       "firstDate": "2026-03-27",
-      "lastDate": "2026-03-29",
+      "lastDate": "2026-03-27",
       "status": "green"
     },
     {
-      "ccVersion": "2.1.91",
-      "sessionCount": 161,
-      "compositeZ": 0.0014613111792582923,
-      "firstDate": "2026-04-03",
-      "lastDate": "2026-04-03",
+      "ccVersion": "2.1.89",
+      "sessionCount": 270,
+      "compositeZ": 0.0028017013030048484,
+      "firstDate": "2026-04-01",
+      "lastDate": "2026-04-06",
       "status": "green"
     },
     {
-      "ccVersion": "2.1.107",
-      "sessionCount": 482,
-      "compositeZ": -0.005186342208039434,
-      "firstDate": "2026-04-14",
-      "lastDate": "2026-04-16",
+      "ccVersion": "2.1.96",
+      "sessionCount": 52,
+      "compositeZ": 0.05069327299481246,
+      "firstDate": "2026-04-08",
+      "lastDate": "2026-04-13",
       "status": "green"
     },
     {
-      "ccVersion": "2.1.105",
-      "sessionCount": 3,
-      "compositeZ": 0.07242369777599238,
-      "firstDate": "2026-04-14",
-      "lastDate": "2026-04-14",
+      "ccVersion": "2.1.63",
+      "sessionCount": 2,
+      "compositeZ": 0.06968823309989235,
+      "firstDate": "2026-04-08",
+      "lastDate": "2026-04-08",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.111",
+      "sessionCount": 2469,
+      "compositeZ": 0.031189623921039644,
+      "firstDate": "2026-04-16",
+      "lastDate": "2026-04-27",
       "status": "green"
     },
     {
@@ -9798,11 +9798,43 @@
       "status": "green"
     },
     {
-      "ccVersion": "2.1.111",
-      "sessionCount": 2469,
-      "compositeZ": 0.03146097342402919,
-      "firstDate": "2026-04-16",
-      "lastDate": "2026-04-27",
+      "ccVersion": "2.1.86",
+      "sessionCount": 464,
+      "compositeZ": 0.03937382533535964,
+      "firstDate": "2026-03-27",
+      "lastDate": "2026-03-29",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.88",
+      "sessionCount": 79,
+      "compositeZ": -0.025855998471979405,
+      "firstDate": "2026-03-31",
+      "lastDate": "2026-04-01",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.112",
+      "sessionCount": 5,
+      "compositeZ": 0.14504029099397642,
+      "firstDate": "2026-04-18",
+      "lastDate": "2026-04-23",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.119",
+      "sessionCount": 4,
+      "compositeZ": -0.1291536346857452,
+      "firstDate": "2026-04-24",
+      "lastDate": "2026-04-25",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.105",
+      "sessionCount": 3,
+      "compositeZ": 0.07242369777599238,
+      "firstDate": "2026-04-14",
+      "lastDate": "2026-04-14",
       "status": "green"
     },
     {
@@ -9822,38 +9854,6 @@
       "status": "green"
     },
     {
-      "ccVersion": "2.1.112",
-      "sessionCount": 5,
-      "compositeZ": 0.14504029099397642,
-      "firstDate": "2026-04-18",
-      "lastDate": "2026-04-23",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.63",
-      "sessionCount": 2,
-      "compositeZ": 0.06968823309989235,
-      "firstDate": "2026-04-08",
-      "lastDate": "2026-04-08",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.85",
-      "sessionCount": 2,
-      "compositeZ": -0.6127955982523363,
-      "firstDate": "2026-03-27",
-      "lastDate": "2026-03-27",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.96",
-      "sessionCount": 52,
-      "compositeZ": 0.05069327299481246,
-      "firstDate": "2026-04-08",
-      "lastDate": "2026-04-13",
-      "status": "green"
-    },
-    {
       "ccVersion": "2.1.90",
       "sessionCount": 19,
       "compositeZ": 0.06037468603563418,
@@ -9864,46 +9864,10 @@
   ],
   "byHour": [
     {
-      "hourPst": 19,
-      "meanSignatureLength": 182.2189821669219,
-      "estimatedThinkingChars": 182.2189821669219,
-      "sampleCount": 420
-    },
-    {
-      "hourPst": 1,
+      "hourPst": 23,
       "meanSignatureLength": 0.0,
       "estimatedThinkingChars": 0.0,
-      "sampleCount": 78
-    },
-    {
-      "hourPst": 8,
-      "meanSignatureLength": 114.30262467734167,
-      "estimatedThinkingChars": 114.30262467734167,
-      "sampleCount": 334
-    },
-    {
-      "hourPst": 2,
-      "meanSignatureLength": 7.860695301227494,
-      "estimatedThinkingChars": 7.860695301227494,
-      "sampleCount": 194
-    },
-    {
-      "hourPst": 6,
-      "meanSignatureLength": 104.66536606557078,
-      "estimatedThinkingChars": 104.66536606557078,
-      "sampleCount": 251
-    },
-    {
-      "hourPst": 22,
-      "meanSignatureLength": 86.06227806916448,
-      "estimatedThinkingChars": 86.06227806916448,
-      "sampleCount": 85
-    },
-    {
-      "hourPst": 7,
-      "meanSignatureLength": 78.03022946097097,
-      "estimatedThinkingChars": 78.03022946097097,
-      "sampleCount": 355
+      "sampleCount": 113
     },
     {
       "hourPst": 0,
@@ -9912,28 +9876,16 @@
       "sampleCount": 112
     },
     {
-      "hourPst": 16,
-      "meanSignatureLength": 97.72828392930089,
-      "estimatedThinkingChars": 97.72828392930089,
-      "sampleCount": 344
+      "hourPst": 4,
+      "meanSignatureLength": 0.4153679791361872,
+      "estimatedThinkingChars": 0.4153679791361872,
+      "sampleCount": 199
     },
     {
-      "hourPst": 15,
-      "meanSignatureLength": 98.78649317052515,
-      "estimatedThinkingChars": 98.78649317052515,
-      "sampleCount": 377
-    },
-    {
-      "hourPst": 12,
-      "meanSignatureLength": 93.19405840436636,
-      "estimatedThinkingChars": 93.19405840436636,
-      "sampleCount": 287
-    },
-    {
-      "hourPst": 23,
-      "meanSignatureLength": 0.0,
-      "estimatedThinkingChars": 0.0,
-      "sampleCount": 113
+      "hourPst": 6,
+      "meanSignatureLength": 104.66536606557078,
+      "estimatedThinkingChars": 104.66536606557078,
+      "sampleCount": 251
     },
     {
       "hourPst": 18,
@@ -9942,16 +9894,94 @@
       "sampleCount": 632
     },
     {
-      "hourPst": 14,
-      "meanSignatureLength": 119.43721018396559,
-      "estimatedThinkingChars": 119.43721018396559,
-      "sampleCount": 262
+      "hourPst": 10,
+      "meanSignatureLength": 149.86985102903927,
+      "estimatedThinkingChars": 149.86985102903927,
+      "sampleCount": 332
+    },
+    {
+      "hourPst": 15,
+      "meanSignatureLength": 99.1372190473254,
+      "estimatedThinkingChars": 99.1372190473254,
+      "sampleCount": 377
+    },
+    {
+      "hourPst": 11,
+      "meanSignatureLength": 91.78947151869795,
+      "estimatedThinkingChars": 91.78947151869795,
+      "sampleCount": 237
+    },
+    {
+      "hourPst": 1,
+      "meanSignatureLength": 0.0,
+      "estimatedThinkingChars": 0.0,
+      "sampleCount": 78
     },
     {
       "hourPst": 21,
       "meanSignatureLength": 72.35037347087686,
       "estimatedThinkingChars": 72.35037347087686,
       "sampleCount": 184
+    },
+    {
+      "hourPst": 16,
+      "meanSignatureLength": 97.68067791014904,
+      "estimatedThinkingChars": 97.68067791014904,
+      "sampleCount": 344
+    },
+    {
+      "hourPst": 13,
+      "meanSignatureLength": 91.59273761904859,
+      "estimatedThinkingChars": 91.59273761904859,
+      "sampleCount": 192
+    },
+    {
+      "hourPst": 7,
+      "meanSignatureLength": 78.02554788481275,
+      "estimatedThinkingChars": 78.02554788481275,
+      "sampleCount": 355
+    },
+    {
+      "hourPst": 22,
+      "meanSignatureLength": 86.06227806916448,
+      "estimatedThinkingChars": 86.06227806916448,
+      "sampleCount": 85
+    },
+    {
+      "hourPst": 5,
+      "meanSignatureLength": 65.08989500311857,
+      "estimatedThinkingChars": 65.08989500311857,
+      "sampleCount": 85
+    },
+    {
+      "hourPst": 12,
+      "meanSignatureLength": 93.19405840436636,
+      "estimatedThinkingChars": 93.19405840436636,
+      "sampleCount": 287
+    },
+    {
+      "hourPst": 19,
+      "meanSignatureLength": 182.2189821669219,
+      "estimatedThinkingChars": 182.2189821669219,
+      "sampleCount": 420
+    },
+    {
+      "hourPst": 3,
+      "meanSignatureLength": 0.0,
+      "estimatedThinkingChars": 0.0,
+      "sampleCount": 132
+    },
+    {
+      "hourPst": 8,
+      "meanSignatureLength": 114.30262467734167,
+      "estimatedThinkingChars": 114.30262467734167,
+      "sampleCount": 334
+    },
+    {
+      "hourPst": 14,
+      "meanSignatureLength": 119.43721018396559,
+      "estimatedThinkingChars": 119.43721018396559,
+      "sampleCount": 262
     },
     {
       "hourPst": 9,
@@ -9966,207 +9996,403 @@
       "sampleCount": 375
     },
     {
-      "hourPst": 4,
-      "meanSignatureLength": 0.4153679791361872,
-      "estimatedThinkingChars": 0.4153679791361872,
-      "sampleCount": 199
-    },
-    {
-      "hourPst": 13,
-      "meanSignatureLength": 91.59273761904859,
-      "estimatedThinkingChars": 91.59273761904859,
-      "sampleCount": 192
-    },
-    {
-      "hourPst": 11,
-      "meanSignatureLength": 91.67469019280892,
-      "estimatedThinkingChars": 91.67469019280892,
-      "sampleCount": 237
-    },
-    {
-      "hourPst": 3,
-      "meanSignatureLength": 0.0,
-      "estimatedThinkingChars": 0.0,
-      "sampleCount": 132
-    },
-    {
-      "hourPst": 10,
-      "meanSignatureLength": 149.86985102903927,
-      "estimatedThinkingChars": 149.86985102903927,
-      "sampleCount": 332
-    },
-    {
       "hourPst": 20,
       "meanSignatureLength": 111.04962818537518,
       "estimatedThinkingChars": 111.04962818537518,
       "sampleCount": 221
     },
     {
-      "hourPst": 5,
-      "meanSignatureLength": 65.08989500311857,
-      "estimatedThinkingChars": 65.08989500311857,
-      "sampleCount": 85
+      "hourPst": 2,
+      "meanSignatureLength": 7.860695301227494,
+      "estimatedThinkingChars": 7.860695301227494,
+      "sampleCount": 194
     }
   ],
   "daily": [
     {
       "date": "2026-04-27",
-      "meanZ": 0.2917142733845326,
+      "compositeZ": -0.17351611162404174,
       "sessionCount": 1
     },
     {
       "date": "2026-04-26",
-      "meanZ": 0.025716786620591348,
+      "compositeZ": 0.01784249670241376,
       "sessionCount": 26
     },
     {
       "date": "2026-04-25",
-      "meanZ": 0.021028269793551737,
+      "compositeZ": 0.021028269793551737,
       "sessionCount": 352
     },
     {
       "date": "2026-04-24",
-      "meanZ": 0.01161645919502925,
+      "compositeZ": 0.01161645919502925,
       "sessionCount": 217
     },
     {
       "date": "2026-04-23",
-      "meanZ": 0.03209012046607676,
+      "compositeZ": 0.03209012046607676,
       "sessionCount": 324
     },
     {
       "date": "2026-04-22",
-      "meanZ": -0.05271418244789755,
+      "compositeZ": -0.05271418244789755,
       "sessionCount": 16
     },
     {
       "date": "2026-04-21",
-      "meanZ": -0.13147701722618957,
+      "compositeZ": -0.13147701722618957,
       "sessionCount": 5
     },
     {
       "date": "2026-04-20",
-      "meanZ": 0.06266724754494093,
+      "compositeZ": 0.06266724754494093,
       "sessionCount": 120
     },
     {
       "date": "2026-04-19",
-      "meanZ": 0.04610272863877825,
+      "compositeZ": 0.04610272863877825,
       "sessionCount": 250
     },
     {
       "date": "2026-04-18",
-      "meanZ": 0.0438991591358254,
+      "compositeZ": 0.0438991591358254,
       "sessionCount": 706
     },
     {
       "date": "2026-04-17",
-      "meanZ": 0.02586839837998205,
+      "compositeZ": 0.02586839837998205,
       "sessionCount": 369
     },
     {
       "date": "2026-04-16",
-      "meanZ": -0.01065795244481469,
+      "compositeZ": -0.01065795244481469,
       "sessionCount": 152
     },
     {
       "date": "2026-04-15",
-      "meanZ": 0.008778252738579002,
+      "compositeZ": 0.008778252738579002,
       "sessionCount": 239
     },
     {
       "date": "2026-04-14",
-      "meanZ": -0.017704585296323273,
+      "compositeZ": -0.017704585296323273,
       "sessionCount": 266
     },
     {
       "date": "2026-04-13",
-      "meanZ": 0.011749738030099426,
+      "compositeZ": 0.011749738030099426,
       "sessionCount": 218
     },
     {
       "date": "2026-04-12",
-      "meanZ": 0.026701089049954784,
+      "compositeZ": 0.026701089049954784,
       "sessionCount": 31
     },
     {
       "date": "2026-04-11",
-      "meanZ": 0.045610333114448016,
+      "compositeZ": 0.045610333114448016,
       "sessionCount": 75
     },
     {
       "date": "2026-04-10",
-      "meanZ": 0.06256241738549008,
+      "compositeZ": 0.06256241738549008,
       "sessionCount": 91
     },
     {
       "date": "2026-04-09",
-      "meanZ": 0.022451488997515524,
+      "compositeZ": 0.022451488997515524,
       "sessionCount": 249
     },
     {
       "date": "2026-04-08",
-      "meanZ": 0.0386923402933183,
+      "compositeZ": 0.0386923402933183,
       "sessionCount": 207
     },
     {
       "date": "2026-04-07",
-      "meanZ": -0.01973527720752464,
+      "compositeZ": -0.01973527720752464,
       "sessionCount": 56
     },
     {
       "date": "2026-04-06",
-      "meanZ": 0.018028841135590723,
+      "compositeZ": 0.018028841135590723,
       "sessionCount": 328
     },
     {
       "date": "2026-04-05",
-      "meanZ": 0.036032526263272247,
+      "compositeZ": 0.036032526263272247,
       "sessionCount": 138
     },
     {
       "date": "2026-04-04",
-      "meanZ": 0.015345208709008514,
+      "compositeZ": 0.015345208709008514,
       "sessionCount": 119
     },
     {
       "date": "2026-04-03",
-      "meanZ": 0.0020542730344865687,
+      "compositeZ": 0.0020542730344865687,
       "sessionCount": 162
     },
     {
       "date": "2026-04-02",
-      "meanZ": 0.018236840456538863,
+      "compositeZ": 0.018236840456538863,
       "sessionCount": 135
     },
     {
       "date": "2026-04-01",
-      "meanZ": -0.008409320866970408,
+      "compositeZ": -0.008409320866970408,
       "sessionCount": 154
     },
     {
       "date": "2026-03-31",
-      "meanZ": -0.02155454759735245,
+      "compositeZ": -0.02155454759735245,
       "sessionCount": 76
     },
     {
       "date": "2026-03-30",
-      "meanZ": 0.02755231654329796,
+      "compositeZ": 0.02755231654329796,
       "sessionCount": 260
     },
     {
       "date": "2026-03-29",
-      "meanZ": -0.018774912260685426,
+      "compositeZ": -0.018774912260685426,
       "sessionCount": 577
     }
   ],
   "keywordTracker": {
-    "positives": 193675,
-    "negatives": 428625,
-    "ratio": 0.3112244897959184,
+    "positives": 193670,
+    "negatives": 428630,
+    "ratio": 0.3112164550859714,
     "baselineRatio": 0.5
   },
-  "incidentsRecent": [],
+  "incidentsRecent": [
+    {
+      "publishedAt": "2026-04-25T18:42:40.706+00:00",
+      "title": "Investigated elevated errors and slower responses on claude.ai",
+      "severity": "none"
+    },
+    {
+      "publishedAt": "2026-04-25T08:43:51.175+00:00",
+      "title": "Elevated errors on Claude Opus 4.7",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-25T07:48:30.897+00:00",
+      "title": "Elevated errors on Claude Opus 4.7",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-25T01:45:32.619+00:00",
+      "title": "Claude Code v2.1.120 Crashes on Startup",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-25T01:35:55.664+00:00",
+      "title": "Elevated error rates on Claude Opus 4.7",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-24T17:03:54.478+00:00",
+      "title": "Issues with sign-ups on platform.claude.com",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-24T10:05:59.992+00:00",
+      "title": "Elevated errors on Claude Opus 4.7",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-24T02:55:26.871+00:00",
+      "title": "Elevated errors on Sonnet 4.6",
+      "severity": "critical"
+    },
+    {
+      "publishedAt": "2026-04-23T15:29:04.130+00:00",
+      "title": "Elevated errors on Claude Opus 4.7",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-23T00:41:43.270+00:00",
+      "title": "MCP apps unavailable on Claude.ai",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-23T02:00:00+00:00",
+      "title": "Issues with responses using structured outputs on the API",
+      "severity": "none"
+    },
+    {
+      "publishedAt": "2026-04-20T13:31:05.010+00:00",
+      "title": "Elevated errors for uploading files",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-20T06:14:02.295+00:00",
+      "title": "Claude Sonnet 4.5 error spike",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-19T22:44:32.175+00:00",
+      "title": "Elevated errors on Opus 4.6",
+      "severity": "none"
+    },
+    {
+      "publishedAt": "2026-04-17T18:59:56.526+00:00",
+      "title": "Errors uploading documents to Google Drive in Claude.ai",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-16T22:26:00.677+00:00",
+      "title": "Failures to add Credentials to Vaults",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-16T19:24:38.419+00:00",
+      "title": "Claude Cowork not starting for some users",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-16T06:50:56.066+00:00",
+      "title": "Opus 4.6 elevated rate of errors",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-15T14:53:02.039+00:00",
+      "title": "Elevated errors on Claude.ai, API, Claude Code",
+      "severity": "critical"
+    },
+    {
+      "publishedAt": "2026-04-14T09:24:51.920+00:00",
+      "title": "Degraded service on usage and analytics admin API endpoints",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-13T15:40:43.567+00:00",
+      "title": "Claude.ai down",
+      "severity": "critical"
+    },
+    {
+      "publishedAt": "2026-04-11T00:00:20.098+00:00",
+      "title": "Email login down",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-10T16:30:38.844+00:00",
+      "title": "Elevated errors on requests to Claude models",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-10T14:00:00+00:00",
+      "title": "Some Claude.ai share links were inaccessible",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-10T04:28:06.379+00:00",
+      "title": "Degraded Performance on Vaults",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-09T16:54:18.801+00:00",
+      "title": "Elevated Connector Error Rates",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-09T08:07:21.160+00:00",
+      "title": "Sonnet 4.6 elevated rate of errors",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-08T23:57:07.068+00:00",
+      "title": "Errors when connecting to Claude.ai",
+      "severity": "none"
+    },
+    {
+      "publishedAt": "2026-04-08T19:22:09.645+00:00",
+      "title": "Outage affecting Workspace Creation",
+      "severity": "none"
+    },
+    {
+      "publishedAt": "2026-04-08T17:46:29.202+00:00",
+      "title": "Elevated errors on Claude.ai, API, Claude Code",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-08T06:23:25.066+00:00",
+      "title": "Sonnet 4.6 elevated rate of errors",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-07T14:32:10+00:00",
+      "title": "Elevated errors on Claude.ai",
+      "severity": "critical"
+    },
+    {
+      "publishedAt": "2026-04-06T21:26:57.114+00:00",
+      "title": "Sonnet 4.6 elevated rate of errors",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-04-06T15:45:36.502+00:00",
+      "title": "Elevated errors on Claude.ai",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-04T17:30:00+00:00",
+      "title": "Sonnet 4.6 and Opus 4.6 elevated error rate",
+      "severity": "none"
+    },
+    {
+      "publishedAt": "2026-04-03T18:12:45.711+00:00",
+      "title": "Elevated errors on requests to Claude Sonnet 4.6",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-01T22:15:35.287+00:00",
+      "title": "Errors on the Claude.ai desktop application",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-01T09:06:18.974+00:00",
+      "title": "Elevated errors on requests to Claude Opus 4.6",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-01T07:01:04.599+00:00",
+      "title": "Elevated timeouts on requests to Claude Opus 4.6 and Sonnet 4.6",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-04-01T01:27:50.853+00:00",
+      "title": "Elevated errors and latency on Claude Haiku 4.5",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-03-31T20:12:05.864+00:00",
+      "title": "Unavailable connectors in Claude.ai desktop applications",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-03-31T19:41:35.022+00:00",
+      "title": "Opus 4.6 and Sonnet 4.6 error rate elevated",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-03-31T08:53:48.398+00:00",
+      "title": "Elevated errors on Claude Opus 4.6",
+      "severity": "minor"
+    },
+    {
+      "publishedAt": "2026-03-29T00:53:21.503+00:00",
+      "title": "Dispatch sessions not responding in Claude Desktop",
+      "severity": "major"
+    },
+    {
+      "publishedAt": "2026-03-28T13:01:10.335+00:00",
+      "title": "Elevated errors on Opus 4.6 Fast Mode",
+      "severity": "minor"
+    }
+  ],
   "issueVelocitySeries": [
     {
       "date": "2026-04-27",

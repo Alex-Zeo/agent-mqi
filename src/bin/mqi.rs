@@ -1284,7 +1284,19 @@ fn main() {
             } else { 0.5 },
             baseline_ratio: 0.5,
         },
-        incidents_recent: vec![],
+        incidents_recent: incidents.iter()
+            .filter(|inc| {
+                // Only include incidents from last 30 days
+                let cutoff = chrono::Utc::now() - chrono::Duration::days(30);
+                inc.start > cutoff
+            })
+            .map(|inc| OutputIncident {
+                published_at: inc.start.to_rfc3339(),
+                title: inc.title.clone(),
+                severity: inc.severity.clone(),
+                affected_models: vec![],
+            })
+            .collect(),
         issue_velocity_series,
     };
 
