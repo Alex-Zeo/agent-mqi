@@ -831,7 +831,7 @@ struct HourStats {
 #[serde(rename_all = "camelCase")]
 struct DailyStats {
     date: String,
-    mean_z: f64,
+    composite_z: f64,
     session_count: u32,
 }
 
