@@ -1,30 +1,30 @@
 {
   "currentMqi": {
-    "mqiX": 45.28850788973836,
-    "compositeZ": -0.28353070417287396,
+    "mqiX": 45.295406350062464,
+    "compositeZ": -0.28311309390859324,
     "status": "green",
     "sessionCount": 6223,
     "metrics": [
       {
         "name": "read_edit_ratio",
-        "raw": 1.0,
-        "z": 0.8194195389611497,
+        "raw": 7.333333333333333,
+        "z": 5.0,
         "status": "green",
         "weight": 0.07,
         "source": "computed"
       },
       {
         "name": "research_mutation_ratio",
-        "raw": 1.0,
-        "z": 4.4253323654413945,
+        "raw": 0.88,
+        "z": 3.860595193431084,
         "status": "green",
         "weight": 0.05,
         "source": "computed"
       },
       {
         "name": "thinking_depth",
-        "raw": 46.8,
-        "z": 1.1031272475209197,
+        "raw": 41.23456790123457,
+        "z": 1.052756772412038,
         "status": "green",
         "weight": 0.09,
         "source": "computed"
@@ -39,9 +39,9 @@
       },
       {
         "name": "write_edit_ratio",
-        "raw": 0.0,
-        "z": 0.1616995153309688,
-        "status": "green",
+        "raw": 1.0,
+        "z": -5.0,
+        "status": "error",
         "weight": 0.03,
         "source": "computed"
       },
@@ -95,8 +95,8 @@
       },
       {
         "name": "keyword_sentiment",
-        "raw": 0.2857142857142857,
-        "z": 0.13196724193738144,
+        "raw": 0.25,
+        "z": -0.003934365792402748,
         "status": "green",
         "weight": 0.02,
         "source": "computed"
@@ -111,8 +111,8 @@
       },
       {
         "name": "zero_reasoning_turn_rate",
-        "raw": 0.9363636363636364,
-        "z": -0.33372793939379064,
+        "raw": 0.9382716049382716,
+        "z": -0.3388314178633666,
         "status": "green",
         "weight": 0.02,
         "source": "computed"
@@ -175,24 +175,24 @@
       },
       {
         "name": "implicit_constraint_violator",
-        "raw": 0.00909090909090909,
-        "z": -0.5404478460174014,
+        "raw": 0.006172839506172839,
+        "z": -0.35993199789318353,
         "status": "green",
         "weight": 0.03,
         "source": "computed"
       },
       {
         "name": "trial_and_error_debugging",
-        "raw": 0.05128205128205128,
-        "z": -1.6943326075685943,
+        "raw": 0.0392156862745098,
+        "z": -1.2685777285772548,
         "status": "watch",
         "weight": 0.03,
         "source": "computed"
       },
       {
         "name": "token_rate_per_minute",
-        "raw": 703.640438247012,
-        "z": 1.590051604492257,
+        "raw": 748.5608465608466,
+        "z": 1.7141636574388157,
         "status": "green",
         "weight": 0.05,
         "source": "computed"
@@ -200,8 +200,8 @@
     ]
   },
   "currentMqi7d": {
-    "mqiX": 49.2078580966047,
-    "compositeZ": -0.04753249128402078,
+    "mqiX": 49.46224546802311,
+    "compositeZ": -0.03226651606753406,
     "sessionCount": 9
   },
   "baseline": {
@@ -388,16 +388,24 @@
   "compositeStdEmpirical": 0.3,
   "compositeAttribution": [
     {
+      "name": "read_edit_ratio",
+      "contribution": 0.35000000000000003
+    },
+    {
       "name": "user_interrupts",
       "contribution": -0.35000000000000003
     },
     {
       "name": "research_mutation_ratio",
-      "contribution": 0.22126661827206973
+      "contribution": 0.19302975967155422
     },
     {
       "name": "reasoning_loops",
       "contribution": -0.1608518911770564
+    },
+    {
+      "name": "write_edit_ratio",
+      "contribution": -0.15
     },
     {
       "name": "premature_stopping",
@@ -405,19 +413,11 @@
     },
     {
       "name": "thinking_depth",
-      "contribution": 0.09928145227688277
+      "contribution": 0.09474810951708341
     },
     {
       "name": "token_rate_per_minute",
-      "contribution": 0.07950258022461286
-    },
-    {
-      "name": "read_edit_ratio",
-      "contribution": 0.05735936772728049
-    },
-    {
-      "name": "trial_and_error_debugging",
-      "contribution": -0.05082997822705783
+      "contribution": 0.08570818287194079
     }
   ],
   "sessions": [
@@ -425,34 +425,34 @@
       "sessionId": "c792d7c9-0ea9-43b0-9dfd-a04c6b184432",
       "model": "claude-opus-4-6",
       "startIso": "2026-04-27T00:56:27.371Z",
-      "endIso": "2026-04-27T02:03:23.696Z",
-      "durationMinutes": 66.93333333333334,
-      "toolCallCount": 76,
+      "endIso": "2026-04-27T02:30:57.770Z",
+      "durationMinutes": 94.5,
+      "toolCallCount": 105,
       "projectName": "-Users-pluto-Documents",
       "isAutomated": false,
       "mqi": {
-        "mqiX": 45.3580524748537,
-        "compositeZ": -0.18621413383404462,
+        "mqiX": 48.50991472969917,
+        "compositeZ": -0.05962106564476147,
         "status": "green",
         "metrics": [
           {
             "name": "read_edit_ratio",
-            "raw": 1.0,
-            "z": 0.8194195389611497,
+            "raw": 7.333333333333333,
+            "z": 5.0,
             "status": "green",
             "weight": 0.07
           },
           {
             "name": "research_mutation_ratio",
-            "raw": 1.0,
-            "z": 4.4253323654413945,
+            "raw": 0.88,
+            "z": 3.860595193431084,
             "status": "green",
             "weight": 0.05
           },
           {
             "name": "thinking_depth",
-            "raw": 46.8,
-            "z": 1.1031272475209197,
+            "raw": 41.23456790123457,
+            "z": 1.052756772412038,
             "status": "green",
             "weight": 0.09
           },
@@ -465,9 +465,9 @@
           },
           {
             "name": "write_edit_ratio",
-            "raw": 0.0,
-            "z": 0.1616995153309688,
-            "status": "green",
+            "raw": 1.0,
+            "z": -5.0,
+            "status": "error",
             "weight": 0.03
           },
           {
@@ -514,8 +514,8 @@
           },
           {
             "name": "keyword_sentiment",
-            "raw": 0.2857142857142857,
-            "z": 0.13196724193738144,
+            "raw": 0.25,
+            "z": -0.003934365792402748,
             "status": "green",
             "weight": 0.02
           },
@@ -528,8 +528,8 @@
           },
           {
             "name": "zero_reasoning_turn_rate",
-            "raw": 0.9363636363636364,
-            "z": -0.33372793939379064,
+            "raw": 0.9382716049382716,
+            "z": -0.3388314178633666,
             "status": "green",
             "weight": 0.02
           },
@@ -584,22 +584,22 @@
           },
           {
             "name": "implicit_constraint_violator",
-            "raw": 0.00909090909090909,
-            "z": -0.5404478460174014,
+            "raw": 0.006172839506172839,
+            "z": -0.35993199789318353,
             "status": "green",
             "weight": 0.03
           },
           {
             "name": "trial_and_error_debugging",
-            "raw": 0.05128205128205128,
-            "z": -1.6943326075685943,
+            "raw": 0.0392156862745098,
+            "z": -1.2685777285772548,
             "status": "watch",
             "weight": 0.03
           },
           {
             "name": "token_rate_per_minute",
-            "raw": 703.640438247012,
-            "z": 1.590051604492257,
+            "raw": 748.5608465608466,
+            "z": 1.7141636574388157,
             "status": "green",
             "weight": 0.05
           }
@@ -980,34 +980,34 @@
       "sessionId": "7d12de84-784f-4f09-97e0-07f1a2343b52",
       "model": "claude-opus-4-5-20251101",
       "startIso": "2026-04-26T15:54:49.343Z",
-      "endIso": "2026-04-27T02:03:24.273Z",
-      "durationMinutes": 608.5666666666667,
-      "toolCallCount": 971,
+      "endIso": "2026-04-27T02:30:53.086Z",
+      "durationMinutes": 636.05,
+      "toolCallCount": 1035,
       "projectName": "-Users-pluto-Documents",
       "isAutomated": false,
       "mqi": {
-        "mqiX": 37.86293127251784,
-        "compositeZ": -0.49537016399998013,
+        "mqiX": 38.25996819288666,
+        "compositeZ": -0.47852840158167637,
         "status": "green",
         "metrics": [
           {
             "name": "read_edit_ratio",
-            "raw": 1.8148148148148149,
-            "z": 1.6225080015871558,
+            "raw": 1.9705882352941178,
+            "z": 1.7760396194421275,
             "status": "green",
             "weight": 0.07
           },
           {
             "name": "research_mutation_ratio",
-            "raw": 0.6447368421052632,
-            "z": 2.7534131062003433,
+            "raw": 0.6633663366336634,
+            "z": 2.8410861733332626,
             "status": "green",
             "weight": 0.05
           },
           {
             "name": "thinking_depth",
-            "raw": 133.18470705064547,
-            "z": 1.523140225903831,
+            "raw": 132.21077065923862,
+            "z": 1.5201760031795513,
             "status": "green",
             "weight": 0.09
           },
@@ -1020,8 +1020,8 @@
           },
           {
             "name": "write_edit_ratio",
-            "raw": 0.2,
-            "z": -2.0525895471397155,
+            "raw": 0.19852941176470587,
+            "z": -2.036308009915666,
             "status": "error",
             "weight": 0.03
           },
@@ -1034,7 +1034,7 @@
           },
           {
             "name": "simplest_fix",
-            "raw": 0.050735667174023336,
+            "raw": 0.050658561296859174,
             "z": 5.0,
             "status": "green",
             "weight": 0.04
@@ -1069,8 +1069,8 @@
           },
           {
             "name": "keyword_sentiment",
-            "raw": 0.38857142857142857,
-            "z": 0.5233638721991601,
+            "raw": 0.3804347826086957,
+            "z": 0.49240194069898324,
             "status": "green",
             "weight": 0.02
           },
@@ -1083,28 +1083,28 @@
           },
           {
             "name": "zero_reasoning_turn_rate",
-            "raw": 0.586395233366435,
-            "z": 0.03394585510432784,
+            "raw": 0.5835654596100278,
+            "z": 0.03577749035631031,
             "status": "green",
             "weight": 0.02
           },
           {
             "name": "reversion_rate",
-            "raw": 0.07407407407407407,
-            "z": -2.519025952668295,
+            "raw": 0.07339449541284404,
+            "z": -2.4949800389070638,
             "status": "error",
             "weight": 0.04
           },
           {
             "name": "post_compaction_drift",
-            "raw": 0.14895729890764647,
+            "raw": 0.1392757660167131,
             "z": -5.0,
             "status": "error",
             "weight": 0.02
           },
           {
             "name": "human_time_estimation",
-            "raw": 1.3662156980884042,
+            "raw": 1.2639729581007784,
             "z": -5.0,
             "status": "error",
             "weight": 0.02
@@ -1146,15 +1146,15 @@
           },
           {
             "name": "trial_and_error_debugging",
-            "raw": 0.04807692307692308,
-            "z": -1.5817199801884014,
+            "raw": 0.04559270516717325,
+            "z": -1.4941994796032234,
             "status": "watch",
             "weight": 0.03
           },
           {
             "name": "token_rate_per_minute",
-            "raw": 1302.9040915813111,
-            "z": 3.2457765870425255,
+            "raw": 1291.933024133323,
+            "z": 3.215464268987179,
             "status": "green",
             "weight": 0.05
           }
@@ -1350,34 +1350,34 @@
       "sessionId": "e40aebe2-4300-431d-a0c4-41c4c73958b2",
       "model": "claude-opus-4-6",
       "startIso": "2026-04-26T19:06:26.508Z",
-      "endIso": "2026-04-27T02:03:17.962Z",
-      "durationMinutes": 416.85,
-      "toolCallCount": 264,
+      "endIso": "2026-04-27T02:30:51.383Z",
+      "durationMinutes": 444.4,
+      "toolCallCount": 265,
       "projectName": "-Users-pluto-Documents",
       "isAutomated": false,
       "mqi": {
-        "mqiX": 55.75627883092348,
-        "compositeZ": 0.23127656186664525,
+        "mqiX": 55.60720279091047,
+        "compositeZ": 0.22523550820743876,
         "status": "green",
         "metrics": [
           {
             "name": "read_edit_ratio",
-            "raw": 4.666666666666667,
-            "z": 4.433317620778177,
+            "raw": 4.703703703703703,
+            "z": 4.469821641806631,
             "status": "green",
             "weight": 0.07
           },
           {
             "name": "research_mutation_ratio",
-            "raw": 0.8235294117647058,
-            "z": 3.5948365242497613,
+            "raw": 0.8246753246753247,
+            "z": 3.6002293543873694,
             "status": "green",
             "weight": 0.05
           },
           {
             "name": "thinking_depth",
-            "raw": 364.008064516129,
-            "z": 1.9303397193988303,
+            "raw": 359.8210735586481,
+            "z": 1.9256450521267128,
             "status": "green",
             "weight": 0.09
           },
@@ -1439,8 +1439,8 @@
           },
           {
             "name": "keyword_sentiment",
-            "raw": 0.6153846153846154,
-            "z": 1.3864436209815438,
+            "raw": 0.6428571428571429,
+            "z": 1.490983319235224,
             "status": "green",
             "weight": 0.02
           },
@@ -1453,8 +1453,8 @@
           },
           {
             "name": "zero_reasoning_turn_rate",
-            "raw": 0.7943548387096774,
-            "z": -0.12355808119998461,
+            "raw": 0.7932405566600398,
+            "z": -0.1224883158545285,
             "status": "green",
             "weight": 0.02
           },
@@ -1467,7 +1467,7 @@
           },
           {
             "name": "post_compaction_drift",
-            "raw": 0.7056451612903226,
+            "raw": 0.7952286282306162,
             "z": -5.0,
             "status": "error",
             "weight": 0.02
@@ -1523,8 +1523,8 @@
           },
           {
             "name": "token_rate_per_minute",
-            "raw": 1331.548518651793,
-            "z": 3.3249192035645705,
+            "raw": 1255.1395139513952,
+            "z": 3.113806286453152,
             "status": "green",
             "weight": 0.05
           }
@@ -9674,10 +9674,10 @@
   ],
   "byModel": [
     {
-      "model": "claude-opus-4-5-20251101",
-      "sessionCount": 11,
-      "avgMqiX": 45.42034683158089,
-      "avgZ": -0.2755514819386475
+      "model": "<synthetic>",
+      "sessionCount": 1691,
+      "avgMqiX": 50.602395384023865,
+      "avgZ": 0.03614547197260459
     },
     {
       "model": "claude-haiku-4-5-20251001",
@@ -9692,44 +9692,44 @@
       "avgZ": -0.39935201115720315
     },
     {
+      "model": "claude-opus-4-6",
+      "sessionCount": 247,
+      "avgMqiX": 45.64872540296406,
+      "avgZ": -0.2617385690439344
+    },
+    {
+      "model": "claude-opus-4-5-20251101",
+      "sessionCount": 11,
+      "avgMqiX": 45.44565175772267,
+      "avgZ": -0.27402041262789256
+    },
+    {
       "model": "claude-sonnet-4-6",
       "sessionCount": 2653,
       "avgMqiX": 50.267910511046225,
       "avgZ": 0.016074784501871612
     },
     {
-      "model": "claude-opus-4-6",
-      "sessionCount": 247,
-      "avgMqiX": 45.64065270885816,
-      "avgZ": -0.2622266338800885
-    },
-    {
       "model": "",
       "sessionCount": 1546,
       "avgMqiX": 51.3490801112382,
       "avgZ": 0.08096445805028418
-    },
-    {
-      "model": "<synthetic>",
-      "sessionCount": 1691,
-      "avgMqiX": 50.602395384023865,
-      "avgZ": 0.03614547197260459
     }
   ],
   "byVersion": [
     {
-      "ccVersion": "2.1.86",
-      "sessionCount": 464,
-      "compositeZ": 0.03937382533535964,
-      "firstDate": "2026-03-27",
-      "lastDate": "2026-03-29",
+      "ccVersion": "2.1.119",
+      "sessionCount": 4,
+      "compositeZ": -0.1291536346857452,
+      "firstDate": "2026-04-24",
+      "lastDate": "2026-04-25",
       "status": "green"
     },
     {
-      "ccVersion": "2.1.87",
-      "sessionCount": 1453,
-      "compositeZ": 0.01605622721530205,
-      "firstDate": "2026-03-29",
+      "ccVersion": "2.1.105",
+      "sessionCount": 3,
+      "compositeZ": 0.07242369777599238,
+      "firstDate": "2026-04-14",
       "lastDate": "2026-04-14",
       "status": "green"
     },
@@ -9742,46 +9742,6 @@
       "status": "green"
     },
     {
-      "ccVersion": "2.1.94",
-      "sessionCount": 114,
-      "compositeZ": 0.04077676116388025,
-      "firstDate": "2026-04-08",
-      "lastDate": "2026-04-08",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.107",
-      "sessionCount": 482,
-      "compositeZ": -0.005186342208039434,
-      "firstDate": "2026-04-14",
-      "lastDate": "2026-04-16",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.111",
-      "sessionCount": 2469,
-      "compositeZ": 0.031194778485558152,
-      "firstDate": "2026-04-16",
-      "lastDate": "2026-04-27",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.119",
-      "sessionCount": 4,
-      "compositeZ": -0.1291536346857452,
-      "firstDate": "2026-04-24",
-      "lastDate": "2026-04-25",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.85",
-      "sessionCount": 2,
-      "compositeZ": -0.6127955982523363,
-      "firstDate": "2026-03-27",
-      "lastDate": "2026-03-27",
-      "status": "green"
-    },
-    {
       "ccVersion": "2.1.90",
       "sessionCount": 19,
       "compositeZ": 0.06037468603563418,
@@ -9790,27 +9750,11 @@
       "status": "green"
     },
     {
-      "ccVersion": "2.1.89",
-      "sessionCount": 270,
-      "compositeZ": 0.0028017013030048484,
-      "firstDate": "2026-04-01",
-      "lastDate": "2026-04-06",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.109",
-      "sessionCount": 2,
-      "compositeZ": 0.038268775692258505,
-      "firstDate": "2026-04-15",
-      "lastDate": "2026-04-16",
-      "status": "green"
-    },
-    {
-      "ccVersion": "2.1.105",
-      "sessionCount": 3,
-      "compositeZ": 0.07242369777599238,
-      "firstDate": "2026-04-14",
-      "lastDate": "2026-04-14",
+      "ccVersion": "2.1.91",
+      "sessionCount": 161,
+      "compositeZ": 0.0014613111792582923,
+      "firstDate": "2026-04-03",
+      "lastDate": "2026-04-03",
       "status": "green"
     },
     {
@@ -9830,11 +9774,51 @@
       "status": "green"
     },
     {
+      "ccVersion": "2.1.107",
+      "sessionCount": 482,
+      "compositeZ": -0.005186342208039434,
+      "firstDate": "2026-04-14",
+      "lastDate": "2026-04-16",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.87",
+      "sessionCount": 1453,
+      "compositeZ": 0.01605622721530205,
+      "firstDate": "2026-03-29",
+      "lastDate": "2026-04-14",
+      "status": "green"
+    },
+    {
       "ccVersion": "2.1.112",
       "sessionCount": 5,
       "compositeZ": 0.14504029099397642,
       "firstDate": "2026-04-18",
       "lastDate": "2026-04-23",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.111",
+      "sessionCount": 2469,
+      "compositeZ": 0.03125042602583696,
+      "firstDate": "2026-04-16",
+      "lastDate": "2026-04-27",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.86",
+      "sessionCount": 464,
+      "compositeZ": 0.03937382533535964,
+      "firstDate": "2026-03-27",
+      "lastDate": "2026-03-29",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.85",
+      "sessionCount": 2,
+      "compositeZ": -0.6127955982523363,
+      "firstDate": "2026-03-27",
+      "lastDate": "2026-03-27",
       "status": "green"
     },
     {
@@ -9846,11 +9830,11 @@
       "status": "green"
     },
     {
-      "ccVersion": "2.1.91",
-      "sessionCount": 161,
-      "compositeZ": 0.0014613111792582923,
-      "firstDate": "2026-04-03",
-      "lastDate": "2026-04-03",
+      "ccVersion": "2.1.109",
+      "sessionCount": 2,
+      "compositeZ": 0.038268775692258505,
+      "firstDate": "2026-04-15",
+      "lastDate": "2026-04-16",
       "status": "green"
     },
     {
@@ -9860,20 +9844,36 @@
       "firstDate": "2026-03-31",
       "lastDate": "2026-04-01",
       "status": "green"
+    },
+    {
+      "ccVersion": "2.1.94",
+      "sessionCount": 114,
+      "compositeZ": 0.04077676116388025,
+      "firstDate": "2026-04-08",
+      "lastDate": "2026-04-08",
+      "status": "green"
+    },
+    {
+      "ccVersion": "2.1.89",
+      "sessionCount": 270,
+      "compositeZ": 0.0028017013030048484,
+      "firstDate": "2026-04-01",
+      "lastDate": "2026-04-06",
+      "status": "green"
     }
   ],
   "byHour": [
     {
-      "hourPst": 7,
-      "meanSignatureLength": 78.02146545380953,
-      "estimatedThinkingChars": 78.02146545380953,
-      "sampleCount": 355
+      "hourPst": 17,
+      "meanSignatureLength": 146.7294550152402,
+      "estimatedThinkingChars": 146.7294550152402,
+      "sampleCount": 375
     },
     {
-      "hourPst": 14,
-      "meanSignatureLength": 119.43721018396559,
-      "estimatedThinkingChars": 119.43721018396559,
-      "sampleCount": 262
+      "hourPst": 19,
+      "meanSignatureLength": 182.2189821669219,
+      "estimatedThinkingChars": 182.2189821669219,
+      "sampleCount": 420
     },
     {
       "hourPst": 22,
@@ -9888,70 +9888,10 @@
       "sampleCount": 132
     },
     {
-      "hourPst": 10,
-      "meanSignatureLength": 149.86985102903927,
-      "estimatedThinkingChars": 149.86985102903927,
-      "sampleCount": 332
-    },
-    {
-      "hourPst": 13,
-      "meanSignatureLength": 91.59273761904859,
-      "estimatedThinkingChars": 91.59273761904859,
-      "sampleCount": 192
-    },
-    {
-      "hourPst": 23,
-      "meanSignatureLength": 0.0,
-      "estimatedThinkingChars": 0.0,
-      "sampleCount": 113
-    },
-    {
-      "hourPst": 5,
-      "meanSignatureLength": 65.08989500311857,
-      "estimatedThinkingChars": 65.08989500311857,
-      "sampleCount": 85
-    },
-    {
-      "hourPst": 11,
-      "meanSignatureLength": 91.9280126173699,
-      "estimatedThinkingChars": 91.9280126173699,
-      "sampleCount": 237
-    },
-    {
-      "hourPst": 18,
-      "meanSignatureLength": 165.9765050003816,
-      "estimatedThinkingChars": 165.9765050003816,
-      "sampleCount": 632
-    },
-    {
-      "hourPst": 1,
-      "meanSignatureLength": 0.0,
-      "estimatedThinkingChars": 0.0,
-      "sampleCount": 78
-    },
-    {
-      "hourPst": 9,
-      "meanSignatureLength": 189.25549551129922,
-      "estimatedThinkingChars": 189.25549551129922,
-      "sampleCount": 422
-    },
-    {
-      "hourPst": 21,
-      "meanSignatureLength": 72.35037347087686,
-      "estimatedThinkingChars": 72.35037347087686,
-      "sampleCount": 184
-    },
-    {
-      "hourPst": 6,
-      "meanSignatureLength": 104.66536606557078,
-      "estimatedThinkingChars": 104.66536606557078,
-      "sampleCount": 251
-    },
-    {
-      "hourPst": 16,
-      "meanSignatureLength": 97.68067791014904,
-      "estimatedThinkingChars": 97.68067791014904,
-      "sampleCount": 344
+      "hourPst": 0,
+      "meanSignatureLength": 5.116071428571429,
+      "estimatedThinkingChars": 5.116071428571429,
+      "sampleCount": 112
     },
     {
       "hourPst": 8,
@@ -9960,40 +9900,10 @@
       "sampleCount": 334
     },
     {
-      "hourPst": 19,
-      "meanSignatureLength": 182.2189821669219,
-      "estimatedThinkingChars": 182.2189821669219,
-      "sampleCount": 420
-    },
-    {
-      "hourPst": 15,
-      "meanSignatureLength": 99.1372190473254,
-      "estimatedThinkingChars": 99.1372190473254,
-      "sampleCount": 377
-    },
-    {
-      "hourPst": 17,
-      "meanSignatureLength": 146.7294550152402,
-      "estimatedThinkingChars": 146.7294550152402,
-      "sampleCount": 375
-    },
-    {
-      "hourPst": 4,
-      "meanSignatureLength": 0.4153679791361872,
-      "estimatedThinkingChars": 0.4153679791361872,
-      "sampleCount": 199
-    },
-    {
       "hourPst": 20,
       "meanSignatureLength": 111.04962818537518,
       "estimatedThinkingChars": 111.04962818537518,
       "sampleCount": 221
-    },
-    {
-      "hourPst": 12,
-      "meanSignatureLength": 93.19405840436636,
-      "estimatedThinkingChars": 93.19405840436636,
-      "sampleCount": 287
     },
     {
       "hourPst": 2,
@@ -10002,180 +9912,108 @@
       "sampleCount": 194
     },
     {
-      "hourPst": 0,
-      "meanSignatureLength": 5.116071428571429,
-      "estimatedThinkingChars": 5.116071428571429,
-      "sampleCount": 112
+      "hourPst": 13,
+      "meanSignatureLength": 91.59273761904859,
+      "estimatedThinkingChars": 91.59273761904859,
+      "sampleCount": 192
+    },
+    {
+      "hourPst": 11,
+      "meanSignatureLength": 91.91034598885732,
+      "estimatedThinkingChars": 91.91034598885732,
+      "sampleCount": 237
+    },
+    {
+      "hourPst": 14,
+      "meanSignatureLength": 119.43721018396559,
+      "estimatedThinkingChars": 119.43721018396559,
+      "sampleCount": 262
+    },
+    {
+      "hourPst": 12,
+      "meanSignatureLength": 93.19405840436636,
+      "estimatedThinkingChars": 93.19405840436636,
+      "sampleCount": 287
+    },
+    {
+      "hourPst": 4,
+      "meanSignatureLength": 0.4153679791361872,
+      "estimatedThinkingChars": 0.4153679791361872,
+      "sampleCount": 199
+    },
+    {
+      "hourPst": 5,
+      "meanSignatureLength": 65.08989500311857,
+      "estimatedThinkingChars": 65.08989500311857,
+      "sampleCount": 85
+    },
+    {
+      "hourPst": 9,
+      "meanSignatureLength": 189.25549551129922,
+      "estimatedThinkingChars": 189.25549551129922,
+      "sampleCount": 422
+    },
+    {
+      "hourPst": 6,
+      "meanSignatureLength": 104.66536606557078,
+      "estimatedThinkingChars": 104.66536606557078,
+      "sampleCount": 251
+    },
+    {
+      "hourPst": 10,
+      "meanSignatureLength": 149.86985102903927,
+      "estimatedThinkingChars": 149.86985102903927,
+      "sampleCount": 332
+    },
+    {
+      "hourPst": 21,
+      "meanSignatureLength": 72.35037347087686,
+      "estimatedThinkingChars": 72.35037347087686,
+      "sampleCount": 184
+    },
+    {
+      "hourPst": 16,
+      "meanSignatureLength": 97.66449932846658,
+      "estimatedThinkingChars": 97.66449932846658,
+      "sampleCount": 344
+    },
+    {
+      "hourPst": 23,
+      "meanSignatureLength": 0.0,
+      "estimatedThinkingChars": 0.0,
+      "sampleCount": 113
+    },
+    {
+      "hourPst": 1,
+      "meanSignatureLength": 0.0,
+      "estimatedThinkingChars": 0.0,
+      "sampleCount": 78
+    },
+    {
+      "hourPst": 18,
+      "meanSignatureLength": 165.9765050003816,
+      "estimatedThinkingChars": 165.9765050003816,
+      "sampleCount": 632
+    },
+    {
+      "hourPst": 15,
+      "meanSignatureLength": 99.1372190473254,
+      "estimatedThinkingChars": 99.1372190473254,
+      "sampleCount": 377
+    },
+    {
+      "hourPst": 7,
+      "meanSignatureLength": 78.01872197101684,
+      "estimatedThinkingChars": 78.01872197101684,
+      "sampleCount": 355
     }
   ],
   "daily": [
     {
-      "date": "2026-04-27",
-      "compositeZ": -0.18621413383404462,
-      "mqi": 0.4690041083751481,
-      "sessionCount": 1
-    },
-    {
-      "date": "2026-04-26",
-      "compositeZ": 0.01882036754880567,
-      "mqi": 0.503136686775501,
-      "sessionCount": 26
-    },
-    {
-      "date": "2026-04-25",
-      "compositeZ": 0.021028269793551737,
-      "mqi": 0.503504654235539,
-      "sessionCount": 352
-    },
-    {
-      "date": "2026-04-24",
-      "compositeZ": 0.01161645919502925,
-      "mqi": 0.5019360668563303,
-      "sessionCount": 217
-    },
-    {
-      "date": "2026-04-23",
-      "compositeZ": 0.03209012046607676,
-      "mqi": 0.505348149434975,
-      "sessionCount": 324
-    },
-    {
-      "date": "2026-04-22",
-      "compositeZ": -0.05271418244789755,
-      "mqi": 0.4912152070197498,
-      "sessionCount": 16
-    },
-    {
-      "date": "2026-04-21",
-      "compositeZ": -0.13147701722618957,
-      "mqi": 0.4781011822775972,
-      "sessionCount": 5
-    },
-    {
-      "date": "2026-04-20",
-      "compositeZ": 0.06266724754494093,
-      "mqi": 0.5104430223509565,
-      "sessionCount": 120
-    },
-    {
-      "date": "2026-04-19",
-      "compositeZ": 0.04610272863877825,
-      "mqi": 0.5076831832896537,
-      "sessionCount": 250
-    },
-    {
-      "date": "2026-04-18",
-      "compositeZ": 0.0438991591358254,
-      "mqi": 0.5073160043472539,
-      "sessionCount": 706
-    },
-    {
-      "date": "2026-04-17",
-      "compositeZ": 0.02586839837998205,
-      "mqi": 0.5043112928784803,
-      "sessionCount": 369
-    },
-    {
-      "date": "2026-04-16",
-      "compositeZ": -0.01065795244481469,
-      "mqi": 0.49822368206568823,
-      "sessionCount": 152
-    },
-    {
-      "date": "2026-04-15",
-      "compositeZ": 0.008778252738579002,
-      "mqi": 0.5014630379476037,
-      "sessionCount": 239
-    },
-    {
-      "date": "2026-04-14",
-      "compositeZ": -0.017704585296323273,
-      "mqi": 0.4970492700399115,
-      "sessionCount": 266
-    },
-    {
-      "date": "2026-04-13",
-      "compositeZ": 0.011749738030099426,
-      "mqi": 0.501958279658622,
-      "sessionCount": 218
-    },
-    {
-      "date": "2026-04-12",
-      "compositeZ": 0.026701089049954784,
-      "mqi": 0.504450064002838,
-      "sessionCount": 31
-    },
-    {
-      "date": "2026-04-11",
-      "compositeZ": 0.045610333114448016,
-      "mqi": 0.5076011365405715,
-      "sessionCount": 75
-    },
-    {
-      "date": "2026-04-10",
-      "compositeZ": 0.06256241738549008,
-      "mqi": 0.510425558266598,
-      "sessionCount": 91
-    },
-    {
-      "date": "2026-04-09",
-      "compositeZ": 0.022451488997515524,
-      "mqi": 0.5037418449757951,
-      "sessionCount": 249
-    },
-    {
-      "date": "2026-04-08",
-      "compositeZ": 0.0386923402933183,
-      "mqi": 0.5064483658369099,
-      "sessionCount": 207
-    },
-    {
-      "date": "2026-04-07",
-      "compositeZ": -0.01973527720752464,
-      "mqi": 0.49671083457890475,
-      "sessionCount": 56
-    },
-    {
-      "date": "2026-04-06",
-      "compositeZ": 0.018028841135590723,
-      "mqi": 0.5030047706831301,
-      "sessionCount": 328
-    },
-    {
-      "date": "2026-04-05",
-      "compositeZ": 0.036032526263272247,
-      "mqi": 0.5060051322792057,
-      "sessionCount": 138
-    },
-    {
-      "date": "2026-04-04",
-      "compositeZ": 0.015345208709008514,
-      "mqi": 0.5025575124800088,
-      "sessionCount": 119
-    },
-    {
-      "date": "2026-04-03",
-      "compositeZ": 0.0020542730344865687,
-      "mqi": 0.5003423787855681,
-      "sessionCount": 162
-    },
-    {
-      "date": "2026-04-02",
-      "compositeZ": 0.018236840456538863,
-      "mqi": 0.503039435970154,
-      "sessionCount": 135
-    },
-    {
-      "date": "2026-04-01",
-      "compositeZ": -0.008409320866970408,
-      "mqi": 0.4985984501930195,
-      "sessionCount": 154
-    },
-    {
-      "date": "2026-03-31",
-      "compositeZ": -0.02155454759735245,
-      "mqi": 0.49640763721528186,
-      "sessionCount": 76
+      "date": "2026-03-29",
+      "compositeZ": -0.018774912260685426,
+      "mqi": 0.4968708888084214,
+      "sessionCount": 577
     },
     {
       "date": "2026-03-30",
@@ -10184,10 +10022,172 @@
       "sessionCount": 260
     },
     {
-      "date": "2026-03-29",
-      "compositeZ": -0.018774912260685426,
-      "mqi": 0.4968708888084214,
-      "sessionCount": 577
+      "date": "2026-03-31",
+      "compositeZ": -0.02155454759735245,
+      "mqi": 0.49640763721528186,
+      "sessionCount": 76
+    },
+    {
+      "date": "2026-04-01",
+      "compositeZ": -0.008409320866970408,
+      "mqi": 0.4985984501930195,
+      "sessionCount": 154
+    },
+    {
+      "date": "2026-04-02",
+      "compositeZ": 0.018236840456538863,
+      "mqi": 0.503039435970154,
+      "sessionCount": 135
+    },
+    {
+      "date": "2026-04-03",
+      "compositeZ": 0.0020542730344865687,
+      "mqi": 0.5003423787855681,
+      "sessionCount": 162
+    },
+    {
+      "date": "2026-04-04",
+      "compositeZ": 0.015345208709008514,
+      "mqi": 0.5025575124800088,
+      "sessionCount": 119
+    },
+    {
+      "date": "2026-04-05",
+      "compositeZ": 0.036032526263272247,
+      "mqi": 0.5060051322792057,
+      "sessionCount": 138
+    },
+    {
+      "date": "2026-04-06",
+      "compositeZ": 0.018028841135590723,
+      "mqi": 0.5030047706831301,
+      "sessionCount": 328
+    },
+    {
+      "date": "2026-04-07",
+      "compositeZ": -0.01973527720752464,
+      "mqi": 0.49671083457890475,
+      "sessionCount": 56
+    },
+    {
+      "date": "2026-04-08",
+      "compositeZ": 0.0386923402933183,
+      "mqi": 0.5064483658369099,
+      "sessionCount": 207
+    },
+    {
+      "date": "2026-04-09",
+      "compositeZ": 0.022451488997515524,
+      "mqi": 0.5037418449757951,
+      "sessionCount": 249
+    },
+    {
+      "date": "2026-04-10",
+      "compositeZ": 0.06256241738549008,
+      "mqi": 0.510425558266598,
+      "sessionCount": 91
+    },
+    {
+      "date": "2026-04-11",
+      "compositeZ": 0.045610333114448016,
+      "mqi": 0.5076011365405715,
+      "sessionCount": 75
+    },
+    {
+      "date": "2026-04-12",
+      "compositeZ": 0.026701089049954784,
+      "mqi": 0.504450064002838,
+      "sessionCount": 31
+    },
+    {
+      "date": "2026-04-13",
+      "compositeZ": 0.011749738030099426,
+      "mqi": 0.501958279658622,
+      "sessionCount": 218
+    },
+    {
+      "date": "2026-04-14",
+      "compositeZ": -0.017704585296323273,
+      "mqi": 0.4970492700399115,
+      "sessionCount": 266
+    },
+    {
+      "date": "2026-04-15",
+      "compositeZ": 0.008778252738579002,
+      "mqi": 0.5014630379476037,
+      "sessionCount": 239
+    },
+    {
+      "date": "2026-04-16",
+      "compositeZ": -0.01065795244481469,
+      "mqi": 0.49822368206568823,
+      "sessionCount": 152
+    },
+    {
+      "date": "2026-04-17",
+      "compositeZ": 0.02586839837998205,
+      "mqi": 0.5043112928784803,
+      "sessionCount": 369
+    },
+    {
+      "date": "2026-04-18",
+      "compositeZ": 0.0438991591358254,
+      "mqi": 0.5073160043472539,
+      "sessionCount": 706
+    },
+    {
+      "date": "2026-04-19",
+      "compositeZ": 0.04610272863877825,
+      "mqi": 0.5076831832896537,
+      "sessionCount": 250
+    },
+    {
+      "date": "2026-04-20",
+      "compositeZ": 0.06266724754494093,
+      "mqi": 0.5104430223509565,
+      "sessionCount": 120
+    },
+    {
+      "date": "2026-04-21",
+      "compositeZ": -0.13147701722618957,
+      "mqi": 0.4781011822775972,
+      "sessionCount": 5
+    },
+    {
+      "date": "2026-04-22",
+      "compositeZ": -0.05271418244789755,
+      "mqi": 0.4912152070197498,
+      "sessionCount": 16
+    },
+    {
+      "date": "2026-04-23",
+      "compositeZ": 0.03209012046607676,
+      "mqi": 0.505348149434975,
+      "sessionCount": 324
+    },
+    {
+      "date": "2026-04-24",
+      "compositeZ": 0.01161645919502925,
+      "mqi": 0.5019360668563303,
+      "sessionCount": 217
+    },
+    {
+      "date": "2026-04-25",
+      "compositeZ": 0.021028269793551737,
+      "mqi": 0.503504654235539,
+      "sessionCount": 352
+    },
+    {
+      "date": "2026-04-26",
+      "compositeZ": 0.019235779424155566,
+      "mqi": 0.5032059193027054,
+      "sessionCount": 26
+    },
+    {
+      "date": "2026-04-27",
+      "compositeZ": -0.05962106564476147,
+      "mqi": 0.49006446374947776,
+      "sessionCount": 1
     }
   ],
   "keywordTracker": {
@@ -10425,124 +10425,124 @@
   ],
   "issueVelocitySeries": [
     {
-      "date": "2026-04-27",
-      "count": 2
-    },
-    {
-      "date": "2026-04-26",
-      "count": 52
-    },
-    {
-      "date": "2026-04-25",
-      "count": 704
-    },
-    {
-      "date": "2026-04-24",
-      "count": 434
-    },
-    {
-      "date": "2026-04-23",
-      "count": 648
-    },
-    {
-      "date": "2026-04-22",
-      "count": 32
-    },
-    {
-      "date": "2026-04-21",
-      "count": 10
-    },
-    {
-      "date": "2026-04-20",
-      "count": 240
-    },
-    {
-      "date": "2026-04-19",
-      "count": 500
-    },
-    {
-      "date": "2026-04-18",
-      "count": 1412
-    },
-    {
-      "date": "2026-04-17",
-      "count": 738
-    },
-    {
-      "date": "2026-04-16",
-      "count": 304
-    },
-    {
-      "date": "2026-04-15",
-      "count": 478
-    },
-    {
-      "date": "2026-04-14",
-      "count": 532
-    },
-    {
-      "date": "2026-04-13",
-      "count": 436
-    },
-    {
-      "date": "2026-04-12",
-      "count": 62
-    },
-    {
-      "date": "2026-04-11",
-      "count": 150
-    },
-    {
-      "date": "2026-04-10",
-      "count": 182
-    },
-    {
-      "date": "2026-04-09",
-      "count": 498
-    },
-    {
-      "date": "2026-04-08",
-      "count": 414
-    },
-    {
-      "date": "2026-04-07",
-      "count": 112
-    },
-    {
-      "date": "2026-04-06",
-      "count": 656
-    },
-    {
-      "date": "2026-04-05",
-      "count": 276
-    },
-    {
-      "date": "2026-04-04",
-      "count": 238
-    },
-    {
-      "date": "2026-04-03",
-      "count": 324
-    },
-    {
-      "date": "2026-04-02",
-      "count": 270
-    },
-    {
-      "date": "2026-04-01",
-      "count": 308
-    },
-    {
-      "date": "2026-03-31",
-      "count": 152
+      "date": "2026-03-29",
+      "count": 1154
     },
     {
       "date": "2026-03-30",
       "count": 520
     },
     {
-      "date": "2026-03-29",
-      "count": 1154
+      "date": "2026-03-31",
+      "count": 152
+    },
+    {
+      "date": "2026-04-01",
+      "count": 308
+    },
+    {
+      "date": "2026-04-02",
+      "count": 270
+    },
+    {
+      "date": "2026-04-03",
+      "count": 324
+    },
+    {
+      "date": "2026-04-04",
+      "count": 238
+    },
+    {
+      "date": "2026-04-05",
+      "count": 276
+    },
+    {
+      "date": "2026-04-06",
+      "count": 656
+    },
+    {
+      "date": "2026-04-07",
+      "count": 112
+    },
+    {
+      "date": "2026-04-08",
+      "count": 414
+    },
+    {
+      "date": "2026-04-09",
+      "count": 498
+    },
+    {
+      "date": "2026-04-10",
+      "count": 182
+    },
+    {
+      "date": "2026-04-11",
+      "count": 150
+    },
+    {
+      "date": "2026-04-12",
+      "count": 62
+    },
+    {
+      "date": "2026-04-13",
+      "count": 436
+    },
+    {
+      "date": "2026-04-14",
+      "count": 532
+    },
+    {
+      "date": "2026-04-15",
+      "count": 478
+    },
+    {
+      "date": "2026-04-16",
+      "count": 304
+    },
+    {
+      "date": "2026-04-17",
+      "count": 738
+    },
+    {
+      "date": "2026-04-18",
+      "count": 1412
+    },
+    {
+      "date": "2026-04-19",
+      "count": 500
+    },
+    {
+      "date": "2026-04-20",
+      "count": 240
+    },
+    {
+      "date": "2026-04-21",
+      "count": 10
+    },
+    {
+      "date": "2026-04-22",
+      "count": 32
+    },
+    {
+      "date": "2026-04-23",
+      "count": 648
+    },
+    {
+      "date": "2026-04-24",
+      "count": 434
+    },
+    {
+      "date": "2026-04-25",
+      "count": 704
+    },
+    {
+      "date": "2026-04-26",
+      "count": 52
+    },
+    {
+      "date": "2026-04-27",
+      "count": 2
     }
   ]
 }
