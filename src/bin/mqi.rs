@@ -131,7 +131,11 @@ enum ContentBlock {
     #[serde(rename = "text")]
     Text { text: String },
     #[serde(rename = "thinking")]
-    Thinking { thinking: String },
+    Thinking {
+        thinking: String,
+        #[serde(default)]
+        signature: Option<String>,
+    },
     #[serde(rename = "tool_use")]
     ToolUse {
         name: String,
@@ -369,29 +373,30 @@ fn parse_session(path: &Path, project_name: &str, incidents: &[Incident]) -> Opt
                     let mut turn_thinking_count = 0u32;
                     for block in &message.content {
                         match block {
-                            ContentBlock::Thinking { thinking } => {
-                                total_thinking_chars += thinking.len() as u64;
+                            ContentBlock::Thinking { thinking, signature } => {
+                                // Use actual thinking length, or estimate from signature
+                                // Empirical ratio: thinking_chars ~= signature_chars * 0.5
+                                let chars = if thinking.is_empty() {
+                                    signature.as_ref().map(|s| (s.len() as f64 * 0.5) as u64).unwrap_or(0)
+                                } else {
+                                    thinking.len() as u64
+                                };
+                                total_thinking_chars += chars;
                                 turn_has_thinking = true;
                                 turn_thinking_count += 1;
                                 total_thinking_blocks += 1;
 
-                                // Check for redacted/empty/truncated thinking
-                                // - Empty thinking (signed thinking where content is encrypted)
-                                // - Very short thinking (likely truncated)
-                                // - Explicit redaction markers
-                                // - Truncation indicators
-                                let is_redacted = thinking.is_empty()
-                                    || thinking.len() < 20
+                                // Check for truly redacted thinking (no signature either)
+                                // Signed thinking (empty text + signature) is NOT redacted
+                                let is_truly_redacted = thinking.is_empty() && signature.is_none();
+                                let is_truncated = !thinking.is_empty() && (
+                                    thinking.len() < 20
                                     || thinking.to_lowercase().contains("<redacted>")
                                     || thinking.to_lowercase().contains("[redacted]")
                                     || thinking.ends_with("...")
                                     || thinking.ends_with("…")
-                                    || (thinking.len() > 100 && !thinking.ends_with('.')
-                                        && !thinking.ends_with('?')
-                                        && !thinking.ends_with('!')
-                                        && !thinking.ends_with(':')
-                                        && !thinking.ends_with('\n'));
-                                if is_redacted {
+                                );
+                                if is_truly_redacted || is_truncated {
                                     redacted_thinking_blocks += 1;
                                 }
                             }
