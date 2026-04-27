@@ -170,17 +170,69 @@ A score of **50 means baseline quality**. Above 50 is better than your historica
 
 New model architectures often trade explicit reasoning for implicit. When Opus 4.7 launched, it showed shorter thinking blocks but better code. Against a pooled baseline dominated by Opus 4.5, every 4.7 session looked "degraded." The fix: compare each model against its own best sessions. Opus 4.7 is measured against Opus 4.7, not Sonnet.
 
-## Dashboard Features
+## Dashboard
 
-- **WHY MQI MOVED**: 7-day vs 30-day divergence analysis, sigma calibration warnings, drift attribution
-- **MQI BY GROUP (RADAR)**: Hexagonal radar chart across all six behavioral dimensions
-- **Session Picker**: Filterable sessions with MQI-X scores, duration, and tool call counts
-- **Group Cards**: Per-group z-scores and deltas (Thinking, Research, Execution, Trust, Throughput, Environment)
-- **GROUP LEGEND**: Full 24-metric breakdown with weights and status indicators
-- **MQI TREND**: Composite z time series with per-session scatter plot
-- **MQI BY MODEL**: Performance comparison across different Claude models
-- **MODEL DEGRADATION**: Top-K cohort comparison table per model
-- **Date Range Filtering**: Period pills (Today, Week, Month) and custom date inputs
+### WHY MQI MOVED
+
+![WHY MQI MOVED](docs/screenshots/why-mqi-moved.png)
+
+Compares your last 7 days against your last 30 days and tells you which metrics are driving the change. The drift attribution bars on the right show exactly which behavioral dimension shifted. When the 7d and 30d lines diverge, something changed in your workflow or the model's behavior. Start here.
+
+### MQI BY GROUP (RADAR)
+
+![MQI BY GROUP](docs/screenshots/radar.png)
+
+Hexagonal radar chart plotting z-scores across all six behavioral dimensions (Thinking, Research, Execution, Trust, Throughput, Environment). A balanced hexagon means consistent quality. A collapsed vertex means one dimension is degrading. The session picker on the right lets you drill into any individual session to see its radar shape.
+
+### GROUP LEGEND
+
+![GROUP LEGEND](docs/screenshots/group-legend.png)
+
+Full breakdown of all 24 metrics organized by group, with weights and status indicators. This is your reference card. Each metric shows its current z-score and whether it's firing above or below baseline. Use this to understand what MQI is actually measuring when a score changes.
+
+### EXTERNAL SIGNALS
+
+![EXTERNAL SIGNALS](docs/screenshots/external-signals.png)
+
+Pulls live incident data from status.claude.com and correlates it with your sessions. The incident feed on the left shows service disruptions. The issue velocity chart on the right shows spikes. Notice the repeated "Elevated errors on Claude Opus 4.7" entries. Now look at which models we were routing to during that same period. This is why `incident_exposure` is a first-class metric: your session quality drops when Anthropic's infrastructure is degraded, and that's not your fault or the model's.
+
+### MQI TREND
+
+![MQI TREND](docs/screenshots/mqi-trend.png)
+
+Composite z-score time series with per-session scatter. The trend line shows your rolling quality trajectory. Individual dots are sessions. Drops below the line are degradation events. Use this to spot multi-day slides before they become habits.
+
+### CLAUDE CODE VERSION
+
+![CLAUDE CODE VERSION](docs/screenshots/cc-version.png)
+
+MQI scores bucketed by Claude Code CLI version. When Anthropic ships a new CLI version, your session quality may shift. This chart catches regressions (or improvements) that correlate with tooling updates rather than model changes.
+
+### MQI BY MODEL
+
+![MQI BY MODEL](docs/screenshots/mqi-by-model.png)
+
+Per-model composite z-score dot plot. Each dot is a session. This is how you compare Opus vs Sonnet vs Haiku at a glance. Remember: Opus scores lower because it handles harder tasks. Compare within cohorts, not across them.
+
+### KEYWORD SENTIMENT
+
+![KEYWORD SENTIMENT](docs/screenshots/keyword-sentiment.png)
+
+Your MQI score alongside your keyword sentiment ratio. The number on the left is your composite score. The ratio shows positive-to-negative keyword balance. When both drop together, the session is genuinely struggling. When sentiment drops but MQI holds, you're just doing hard engineering work.
+
+### MODEL DEGRADATION
+
+![MODEL DEGRADATION](docs/screenshots/model-degradation.png)
+
+Top-K cohort comparison table per model. Shows each model's best sessions (the baseline cohort) versus recent sessions. When the delta is negative, that model is performing worse than its own historical best. This is the signal that tells you to switch models.
+
+### THINKING DEPTH BY HOUR / DAY
+
+| | |
+|---|---|
+| ![Hourly](docs/screenshots/hourly-thinking.png) | ![Daily](docs/screenshots/daily-thinking.png) |
+
+Thinking depth broken out by hour of day (PST) and day of week. Deeper thinking correlates with better outputs. If your model thinks less at 2am or on weekends, you now know when to schedule critical work. These charts surface temporal patterns in inference quality that are invisible at the session level.
 
 ## Library Usage
 
