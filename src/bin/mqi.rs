@@ -1189,6 +1189,7 @@ fn main() {
     }).collect();
     daily.sort_by(|a, b| b.date.cmp(&a.date));
     daily.truncate(30);
+    daily.sort_by(|a, b| a.date.cmp(&b.date)); // Dashboard expects ascending order
 
     // Build issue velocity series from daily stats
     let issue_velocity_series: Vec<IssueVelocity> = daily.iter().map(|d| {
