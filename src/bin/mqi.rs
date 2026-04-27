@@ -843,6 +843,7 @@ struct HourStats {
 struct DailyStats {
     date: String,
     composite_z: f64,
+    mqi: f64,
     session_count: u32,
 }
 
@@ -858,7 +859,7 @@ struct KeywordTracker {
 #[derive(Serialize)]
 struct IssueVelocity {
     date: String,
-    open: u32,
+    count: u32,
 }
 
 #[derive(Serialize)]
@@ -1177,9 +1178,12 @@ fn main() {
 
     // Build daily stats (last 30 days)
     let mut daily: Vec<DailyStats> = daily_stats.iter().map(|(date, (sum_z, count))| {
+        let avg_z = sum_z / *count as f64;
+        let mqi = 0.5 * (1.0 + (avg_z / 3.0).tanh());
         DailyStats {
             date: date.clone(),
-            composite_z: sum_z / *count as f64,
+            composite_z: avg_z,
+            mqi,
             session_count: *count,
         }
     }).collect();
@@ -1190,7 +1194,7 @@ fn main() {
     let issue_velocity_series: Vec<IssueVelocity> = daily.iter().map(|d| {
         IssueVelocity {
             date: d.date.clone(),
-            open: d.session_count * 2, // Proxy: session activity correlates with issues
+            count: d.session_count * 2, // Proxy: session activity correlates with issues
         }
     }).collect();
 
