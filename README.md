@@ -6,6 +6,8 @@ Here's 2,740 sessions of data proving your frustration isn't a personality flaw.
 
 ![MQI Dashboard](docs/screenshots/hero.png)
 
+> **[Read the full analysis on alejandro-gutierrez.com →](https://alejandro-gutierrez.com/projects/agent-mqi)**
+
 MQI (Model Quality Index) is a 24-metric composite score that detects when your AI coding assistant is degrading, built from real Claude Code session transcripts.
 
 ---
