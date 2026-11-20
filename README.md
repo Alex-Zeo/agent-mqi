@@ -6,7 +6,7 @@
 
 I run AI coding agents for most of my day. Some days they seemed sharp and some days they seemed off, and I had no way to tell a worse model from a harder task or a bad day of my own. MQI reads Claude Code session transcripts, measures 24 behaviours in each session (how much the agent read before editing, how often I had to interrupt or repeat an instruction, how much it reasoned, how often it retried after an error), and scores every session against that model's own best sessions.
 
-It is a Rust CLI and a static dashboard. It runs locally on your own transcripts and sends nothing anywhere except two public status feeds (service incidents and issue velocity).
+It is a Rust CLI and a static dashboard. It runs locally on your own transcripts. Its only network call reads the public status.claude.com incident feed; it uploads nothing.
 
 ---
 
@@ -29,7 +29,7 @@ The hardest tasks went to Opus, so these gaps mix model and task difficulty. The
 
 ## A correction to my own headline
 
-The first version of this README said my frustration fell as my tooling improved, citing the weekly sentiment chart. When I looked again, that rise came from the last two weeks, where 2,294 of 2,434 sessions sit at exactly 5.0. That is the midpoint of the scale, and it looks like a default for sessions with no keyword signal, mostly automated runs. With those 2,364 midpoint sessions left out, the trend goes the other way: weeks 15 and 16 average 1.4 against 2.2 before. I also wrote that the score proved things it does not prove. The chart below is redrawn with the midpoint sessions left out of the line.
+The first version of this README said my frustration fell as my tooling improved, citing the weekly sentiment chart. When I looked again, that rise came from the last two weeks, where 2,294 of 2,434 sessions sit at exactly 5.0. That is the midpoint of the scale, and it looks like a default for sessions with no keyword signal. With those 2,364 midpoint sessions left out, the trend goes the other way: weeks 15 and 16 average 1.4 against 2.2 before. I also wrote that the score proved things it does not prove. The chart below is redrawn with the midpoint sessions left out of the line.
 
 ![Weekly keyword sentiment](docs/screenshots/sentiment-trend.png)
 
